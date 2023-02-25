@@ -102,7 +102,7 @@ The command we provided is running a tool called Newman which is used to run Pos
 You can find more details about the test run in the Test Plans > Runs.
 
 Locate the Summary tab and find the Test Summary executed throught newman
-![Test Summary](https://github.com/PiyushMittl/Others/blob/main/postman-integration-ado/images/5.test_summary.jpg)
+![Test Summary](https://github.com/PiyushMittl/Others/blob/main/postman-integration-ado/images/5.test_sumary.jpg)
 
 Locate the Result tab and find the Test Results executed throught newman
 ![Test Results](https://github.com/PiyushMittl/Others/blob/main/postman-integration-ado/images/6.test_result.jpg)
