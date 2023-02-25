@@ -23,6 +23,8 @@ pm.test("Response body contains 'success'", function () {
     pm.expect(pm.response.text()).to.include("success");
 });
 ```
+![Sample Testcase](https://github.com/PiyushMittl/Others/blob/main/postman-integration-ado/images/1.sample_testcase)
+
 6. Once you have written your test cases, click the Send button to run the request and see the results of your tests.
 7. If all of your test cases pass, you'll see a green checkmark next to each one in the Tests tab. If any of your test cases fail, you'll see a red X next to the failing test.  
   
