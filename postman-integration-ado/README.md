@@ -102,5 +102,5 @@ The command we provided is running a tool called Newman which is used to run Pos
 You can find more details about the test run in the Test Plans > Runs. You can find more details like Test Runs and details about Tests.
 
 <5.test_summary.jpg>
-https://github.com/PiyushMittl/Others/blob/main/postman-integration-ado/images/6.test_result.jpg
+![Test Results](https://github.com/PiyushMittl/Others/blob/main/postman-integration-ado/images/6.test_result.jpg)
 
