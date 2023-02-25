@@ -23,7 +23,7 @@ pm.test("Response body contains 'success'", function () {
     pm.expect(pm.response.text()).to.include("success");
 });
 ```
-![Sample Testcase](https://github.com/PiyushMittl/Others/blob/main/postman-integration-ado/images/1.sample_testcase)
+![Sample Testcase](https://github.com/PiyushMittl/Others/blob/main/postman-integration-ado/images/1.sample_testcase.jpg)
 
 6. Once you have written your test cases, click the Send button to run the request and see the results of your tests.
 7. If all of your test cases pass, you'll see a green checkmark next to each one in the Tests tab. If any of your test cases fail, you'll see a red X next to the failing test.  
@@ -32,10 +32,13 @@ To save postman collection follow the below steps
   
 8. Open Postman and select the collection you want to export.
 9. Click on the "..." icon next to the collection name and select "Export".
+![Sample Testcase](https://github.com/PiyushMittl/Others/blob/main/postman-integration-ado/images/2.export_collection.jpg)
 10. In the "Export" window, choose the format in which you want to export the collection. The available formats are Postman Collection v1, Postman Collection v2, and OpenAPI 3.0.
+![Export_In_Jsonformat](https://github.com/PiyushMittl/Others/blob/main/postman-integration-ado/images/3.export_in_jsonformat.jpg)
 11. Choose the folder where you want to save the exported file and click on "Save".
 
 note:If you’re using any tokens or variables, you can using Postman environments, and you need to export that as well.
+
 
 ## Run postman collection in ADO 
 
@@ -87,6 +90,7 @@ Example:
         testResultsFormat: 'JUnit'
         testResultsFiles: $(Build.SourcesDirectory)/.pipelines/JunitResults.xml
 ```      
+![Test Result Console](https://github.com/PiyushMittl/Others/blob/main/postman-integration-ado/images/4.test_result_console.jpg)
 
 
 The command we provided is running a tool called Newman which is used to run Postman collections and generate reports. Here's a breakdown of each part of the command:
