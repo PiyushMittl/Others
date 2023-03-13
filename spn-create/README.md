@@ -23,7 +23,8 @@ Enter the Service Principal name.
 
 ### Step 2.4: Select **Accounts in this organizational directory only**.
 
-### Step 2.5: (Optional, leave it blank) For **Redirect URI** select **Web** and enter any URL you want; it doesn't have to be real or work.
+### Step 2.5: For **Redirect URI** select **Web** and enter any URL you want; it doesn't have to be real or work.
+This step is optional and can be ignored.
 
 ### Step 2.6: Then select **Register**.
 ![3.create-service-principal-azure-register.png](https://github.com/PiyushMittl/Others/blob/main/spn-create/images/3.create-service-principal-azure-register.png)
@@ -51,6 +52,8 @@ why role assignment is required
 Assigning a role to a Service Principal Name (SPN) is an important step in securing access to Azure resources. By assigning a role, you can control the level of access that the SPN has to resources within your Azure subscription. This ensures that only the necessary actions are performed by the SPN and that there is no unauthorized access to sensitive resources.
 
 ### Step 4.1 Sign-in to the Azure portal
+First, sign in to the [Azure portal](https://portal.azure.com/)  using your credentials.
+
 ### Step 4.2 Select the Subscription
 Select the level of scope you wish to assign the application to. For example, to assign a role at the subscription scope, search for and select Subscriptions. If you don't see the subscription you're looking for, select global subscriptions filter. Make sure the subscription you want is selected for the tenant. Select your Subscription.
 ![9.assign-role-spn-select-subs.png](https://github.com/PiyushMittl/Others/blob/main/spn-create/images/9.assign-role-spn-select-subs.png)
