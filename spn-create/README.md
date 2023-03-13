@@ -19,14 +19,15 @@ Navigate to the Azure Active Directory (AD) pane in the portal and create a new 
 ![2.create-service-principal-azure-new-reg.png](https://github.com/PiyushMittl/Others/blob/main/spn-create/images/2.create-service-principal-azure-new-reg.png)
 
 ### Step 2.3: Enter a name for the **application** (the service principal name).
+Enter the Service Principal name.
 
 ### Step 2.4: Select **Accounts in this organizational directory only**.
 
 ### Step 2.5: (Optional, leave it blank) For **Redirect URI** select **Web** and enter any URL you want; it doesn't have to be real or work.
 
 ### Step 2.6: Then select **Register**.
-<3.create-service-principal-azure-register.png>
-<4.create-service-principal-azure-new-app.png>
+![3.create-service-principal-azure-register.png]<3.create-service-principal-azure-register.png>
+![4.create-service-principal-azure-new-app.png]<4.create-service-principal-azure-new-app.png>
 
 ## Step 3: Create a Client Secret
 Next, you'll need to create a client secret for the application. This is used to authenticate requests made by the application.
@@ -35,8 +36,8 @@ Next, you'll need to create a client secret for the application. This is used to
 <5.create-service-principal-azure-add-secret.png>
 
 ### 3.2 Provide a Description and set the Expires for the secret
-<6.create-service-pricipal-azure-add-secret-decexpir.png>
-<7.create-service-pricipal-azure-add-secret-decexpir-created.png>
+![6.create-service-pricipal-azure-add-secret-decexpir.png>
+![7.create-service-pricipal-azure-add-secret-decexpir-created.png>
 
 ### 3.3 Copy the value of Client credentials from Overview
 <8.create-service-principal-azure-client-cred.png>
