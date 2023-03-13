@@ -80,7 +80,7 @@ By default, Azure AD applications aren't displayed in the available options. To 
 
 ### Step 4.9 Search SPN and "Review + create"
 Click on the "Review + create" button at the bottom of the page once you've filled in all the necessary fields.
-![14.assign-role-spn-select-assignaccessto.png](https://github.com/PiyushMittl/Others/blob/main/spn-create/images/14.assign-role-spn-select-assignaccessto.png)
+![14.assign-role-spn-reviewcreate.png](https://github.com/PiyushMittl/Others/blob/main/spn-create/images/14.assign-role-spn-reviewcreate.png)
 
 ### Step 4.10 Review and create the role assignment
 Review the details of the role assignment and then click on the "Create" button at the bottom of the page to create the role assignment.
