@@ -13,16 +13,16 @@ First, sign in to the [Azure portal](https://portal.azure.com/)  using your cred
 Navigate to the Azure Active Directory (AD) pane in the portal and create a new Azure AD Application. You can do this by selecting the "App registrations" option in the left-hand pane and then clicking on "New registration" at the top.
 
 ### Step 2.1: Select **Azure Active Directory** from the left-hand side menu.
-<1.create-service-principal-azure-aad.png>
+![1.create-service-principal-azure-aad.png](https://github.com/PiyushMittl/Others/blob/main/spn-create/images/1.create-service-principal-azure-aad.png)
 
 ### Step 2.2: Select **App registrations** and + **New registration**
-<2.create-service-principal-azure-new-reg.png>
+![2.create-service-principal-azure-new-reg.png](https://github.com/PiyushMittl/Others/blob/main/spn-create/images/2.create-service-principal-azure-new-reg.png)
 
 ### Step 2.3: Enter a name for the **application** (the service principal name).
 
 ### Step 2.4: Select **Accounts in this organizational directory only**.
 
-### Step 2.5: For **Redirect URI** select **Web** and enter any URL you want; it doesn't have to be real or work.
+### Step 2.5: (Optional, leave it blank) For **Redirect URI** select **Web** and enter any URL you want; it doesn't have to be real or work.
 
 ### Step 2.6: Then select **Register**.
 <3.create-service-principal-azure-register.png>
