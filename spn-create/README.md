@@ -26,8 +26,8 @@ Enter the Service Principal name.
 ### Step 2.5: (Optional, leave it blank) For **Redirect URI** select **Web** and enter any URL you want; it doesn't have to be real or work.
 
 ### Step 2.6: Then select **Register**.
-![3.create-service-principal-azure-register.png]<3.create-service-principal-azure-register.png>
-![4.create-service-principal-azure-new-app.png]<4.create-service-principal-azure-new-app.png>
+![3.create-service-principal-azure-register.png](https://github.com/PiyushMittl/Others/blob/main/spn-create/images/3.create-service-principal-azure-register.png)
+![4.create-service-principal-azure-new-app.png](https://github.com/PiyushMittl/Others/blob/main/spn-create/images/4.create-service-principal-azure-new-app.png)
 
 ## Step 3: Create a Client Secret
 Next, you'll need to create a client secret for the application. This is used to authenticate requests made by the application.
@@ -36,11 +36,11 @@ Next, you'll need to create a client secret for the application. This is used to
 <5.create-service-principal-azure-add-secret.png>
 
 ### 3.2 Provide a Description and set the Expires for the secret
-![6.create-service-pricipal-azure-add-secret-decexpir.png>
-![7.create-service-pricipal-azure-add-secret-decexpir-created.png>
+![6.create-service-pricipal-azure-add-secret-decexpir.png](https://github.com/PiyushMittl/Others/blob/main/spn-create/images/
+![7.create-service-pricipal-azure-add-secret-decexpir-created.png](https://github.com/PiyushMittl/Others/blob/main/spn-create/images/
 
 ### 3.3 Copy the value of Client credentials from Overview
-<8.create-service-principal-azure-client-cred.png>
+![8.create-service-principal-azure-client-cred.png](https://github.com/PiyushMittl/Others/blob/main/spn-create/images/8.create-service-principal-azure-client-cred.png)
 
 note: 
 Make a note of the value of the client secret as you won't be able to access it again once you leave the page.
@@ -53,37 +53,37 @@ Assigning a role to a Service Principal Name (SPN) is an important step in secur
 ### Step 4.1 Sign-in to the Azure portal
 ### Step 4.2 Select the Subscription
 Select the level of scope you wish to assign the application to. For example, to assign a role at the subscription scope, search for and select Subscriptions. If you don't see the subscription you're looking for, select global subscriptions filter. Make sure the subscription you want is selected for the tenant. Select your Subscription.
-<9.assign-role-spn-select-subs.png>
+![9.assign-role-spn-select-subs.png](https://github.com/PiyushMittl/Others/blob/main/spn-create/images/9.assign-role-spn-select-subs.png)
 
 ### Step 4.3 Navigate to the Access Control (IAM) pane
 In the left-hand pane, select the "Access Control (IAM)" option.
-<10.assign-role-spn-select-subs-IAM.png>
+![10.assign-role-spn-select-subs-IAM.png](https://github.com/PiyushMittl/Others/blob/main/spn-create/images/10.assign-role-spn-select-subs-IAM.png)
 
 ### Step 4.4 Click on "Add"
 Click on the "Add" button at the top of the page to add a new role assignment.
-<11.assign-role-spn-add-role-asgmnt.png>
+![11.assign-role-spn-add-role-asgmnt.png](https://github.com/PiyushMittl/Others/blob/main/spn-create/images/11.assign-role-spn-add-role-asgmnt.png)
 
 ### Step 4.5 Choose Privileged administrator roles
 locate **Assignment type** (it should be 1st tab) and select Privileged administrator roles and click next.
-<12.assign-role-spn-choose-assignment-type.png>
+![12.assign-role-spn-choose-assignment-type.png](https://github.com/PiyushMittl/Others/blob/main/spn-create/images/12.assign-role-spn-choose-assignment-type.png)
 
 ### Step 4.6 Choose a role
 In the Role tab, select the role you wish to assign to the application in the list. Choose the role that you want to assign to your SPN. For example, you can select "Contributor" if you want the SPN to have contributor access to a particular resource.
-<13.assign-role-spn-choose-role.png>
+![13.assign-role-spn-choose-role.png](https://github.com/PiyushMittl/Others/blob/main/spn-create/images/13.assign-role-spn-choose-role.png)
 
 ### Step 4.7 Choose a scope
 Choose the scope at which you want to assign the role.On the Members tab. Select Assign access to, then select User, group, or service principal.
-<14.assign-role-spn-select-assignaccessto.png>
+![14.assign-role-spn-select-assignaccessto.png](https://github.com/PiyushMittl/Others/blob/main/spn-create/images/14.assign-role-spn-select-assignaccessto.png)
 
 ### Step 4.8 Select Select members. 
 By default, Azure AD applications aren't displayed in the available options. To find your application, Search for it by its name.
 
 ### Step 4.9 Search SPN and "Review + create"
 Click on the "Review + create" button at the bottom of the page once you've filled in all the necessary fields.
-<14.assign-role-spn-select-assignaccessto.png>
+![14.assign-role-spn-select-assignaccessto.png](https://github.com/PiyushMittl/Others/blob/main/spn-create/images/14.assign-role-spn-select-assignaccessto.png)
 
 ### Step 4.10 Review and create the role assignment
 Review the details of the role assignment and then click on the "Create" button at the bottom of the page to create the role assignment.
-<15.assign-role-spn-select-reviewassign.png>
+![15.assign-role-spn-select-reviewassign.png](https://github.com/PiyushMittl/Others/blob/main/spn-create/images/15.assign-role-spn-select-reviewassign.png)
 
 That's it! You've successfully assigned a role to the SPN you created in Azure. Now the SPN will have the permissions associated with the assigned role at the selected scope.
