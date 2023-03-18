@@ -24,16 +24,19 @@ After selecting "Azure Resource Manager" as "Service Connection Type" choose "Au
 ![4.create-sc-ado-spn-newsc-spnmanual.png](https://github.com/PiyushMittl/Others/blob/main/create-sc-ado-spn/images/4.create-sc-ado-spn-newsc-spnmanual.png)
 
 ## Step 6: Fill below details and Authenticate.
-Scope Level: Select "Subscription"
-Subscription Id: Fill your Subscription Id for which you have created your SPN.
-Provide below Authentication details
-Service Principal ID: Provide your service principal ID (Enter the client secret for the SPN. This is the password that you generated when you created the SPN)
-Credential: Choose "Service Principal Key" and provide SPN passcode here
-Tenant Id: Provide Tenant Id
+Scope Level: Select "Subscription"  
+Subscription Id: Fill your Subscription Id for which you have created your SPN.  
+Provide below Authentication details  
+Service Principal ID: Provide your service principal ID (Enter the client secret for the SPN. This is the password that you generated when you created the SPN)  
+Credential: Choose "Service Principal Key" and provide SPN passcode here  
+Tenant Id: Provide Tenant Id  
 
 After filling all these details "Authenticate" these details by clicking on "Verify", you should get "Verification Succeeded" message.
 
 ![5.create-sc-ado-spn-newsc-testverifysave.png](https://github.com/PiyushMittl/Others/blob/main/create-sc-ado-spn/images/5.create-sc-ado-spn-newsc-testverifysave.png)
+
+You can refer below image to map SPN properties with these Authentication properties  
+![5.1.create-sc-ado-spn-newsc-testverifysave.png](https://github.com/PiyushMittl/Others/blob/main/create-sc-ado-spn/images/5.1.create-sc-ado-spn-newsc-testverifysave.png)
 
 ## Step 7: Verify and Save the Azure Service Connection.
 Once Verification is done click on "Verify and Save" button, now you would see your newly create "Service Connection"
