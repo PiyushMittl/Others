@@ -8,10 +8,10 @@ As more and more organizations are moving their services to the cloud, authentic
 
 ## Step1: Define Variables in Postman
 Postman allows you to set variables at various levels, you can read all about variables and scopes here: Postman: Using variables https://learning.postman.com/docs/sending-requests/variables/ . In this example, we’ll use “Collection level” variables.
-![1.postman_create_token_parameters_values.png](https://github.com/PiyushMittl/Others/blob/main/create-sc-ado-spn/images/1.postman_create_token_parameters_values.png)
+![1.postman_create_token_parameters_values.png](https://github.com/PiyushMittl/Others/blob/main/postman-create-az-token/images/1.postman_create_token_parameters_values.png)
 
 Bases on created SPN in Azure initialize these variables.
-![2.postman_create_token_parameters_values_mapping_with_spn.png](https://github.com/PiyushMittl/Others/blob/main/create-sc-ado-spn/images/2.postman_create_token_parameters_values_mapping_with_spn.png)
+![2.postman_create_token_parameters_values_mapping_with_spn.png](https://github.com/PiyushMittl/Others/blob/main/postman-create-az-token/images/2.postman_create_token_parameters_values_mapping_with_spn.png)
 
 
 Variable Name	Current Value	Notes  
@@ -26,10 +26,10 @@ rest variables can be ignored as of now.
 
 ## Step2: Create GET method with below parameters
 Parameterizing is the best way to populate dynamic variable, refer below screenshot and create a GET call.
-![3.postman_create_token_parameters.png](https://github.com/PiyushMittl/Others/blob/main/create-sc-ado-spn/images/3.postman_create_token_parameters.png)
+![3.postman_create_token_parameters.png](https://github.com/PiyushMittl/Others/blob/main/postman-create-az-token/images/3.postman_create_token_parameters.png)
 
 refer below screenshot to locate the variables in postman
-![4.postman_create_token_parameters_values_mapping.png](https://github.com/PiyushMittl/Others/blob/main/create-sc-ado-spn/images/4.postman_create_token_parameters_values_mapping.png)
+![4.postman_create_token_parameters_values_mapping.png](https://github.com/PiyushMittl/Others/blob/main/postman-create-az-token/images/4.postman_create_token_parameters_values_mapping.png)
 
 Write below script in "Test" tab to to initialize **access_token** variable with the created token
 ```
@@ -41,22 +41,22 @@ pm.environment.unset("access_token");
 pm.environment.set("access_token", JsonObject.access_token);
 ```
 
-![4.1.postman_create_token_parameters_values_mapping_script.png](https://github.com/PiyushMittl/Others/blob/main/create-sc-ado-spn/images/4.1.postman_create_token_parameters_values_mapping_script.png)
+![4.1.postman_create_token_parameters_values_mapping_script.png](https://github.com/PiyushMittl/Others/blob/main/postman-create-az-token/images/4.1.postman_create_token_parameters_values_mapping_script.png)
 
 ## Step3: Make a GET call and generate the token
 You are all set to make a get call to generate Oauth token. Once the Oauth token is create that Oauth token can be used to make further call on Azure to manage Azure resources.
 
-![5.postman_create_token_generation.png](https://github.com/PiyushMittl/Others/blob/main/create-sc-ado-spn/images/5.postman_create_token_generation.png)
+![5.postman_create_token_generation.png](https://github.com/PiyushMittl/Others/blob/main/postman-create-az-token/images/5.postman_create_token_generation.png)
 
 
 Once the token is created it will be initialize in **access_token** variable.
-![6.postman_create_token_generation_initialization.png](https://github.com/PiyushMittl/Others/blob/main/create-sc-ado-spn/images/6.postman_create_token_generation_initialization.png)
+![6.postman_create_token_generation_initialization.png](https://github.com/PiyushMittl/Others/blob/main/postman-create-az-token/images/6.postman_create_token_generation_initialization.png)
 
 
 ## Step4: Make REST calls on Azure manage resource using access_token variable
 Once the token is created use access_token variable to make REST calls on Azure to manage resources.
 Below screen shot can be referred to make a sample GET call to get created resources in Azure Subscription.
-![7.postman_create_token_get_rg_using_token.png](https://github.com/PiyushMittl/Others/blob/main/create-sc-ado-spn/images/7.postman_create_token_get_rg_using_token.png)
+![7.postman_create_token_get_rg_using_token.png](https://github.com/PiyushMittl/Others/blob/main/postman-create-az-token/images/7.postman_create_token_get_rg_using_token.png)
 
 
 In this blog, we have learned how to create an Azure AD token using Postman, a popular tool for API testing and development. By setting up an Azure AD application, granting permissions to the application, and using Postman to get an access token, we have demonstrated how to authenticate API requests to Azure AD. This method can be useful for developers who are building applications that require secure access to Azure AD resources. It is important to note that the access token has a limited lifespan, so it is important to refresh it periodically. Additionally, the access token must be kept secure, as it can provide access to sensitive resources. By following best practices for authentication and authorization, developers can ensure that their applications are secure and their users' data is protected.
