@@ -64,7 +64,7 @@ Host YourServerName
 ![Alt text](images/4.1.linux_ssh_vscode_connectvm.jpg)
 ![Alt text](images/4.2.linux_ssh_vscode_connectvm.jpg)
 ![Alt text](images/4.3.linux_ssh_vscode_connectvm.jpg)
-
+![Alt text](images/4.4.linux_ssh_vscode_explorerview.jpg)
 That's it! You should now be able to connect to your Linux server from Visual Studio Code using the SSH extension and your SSH key pair.
 
 Trouble shoot guide: 
