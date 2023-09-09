@@ -15,7 +15,7 @@ note: email id can be anything.
 
 Replace **"your_email@example.com"** with your email address. This command will generate a public key (**id_rsa.pub**) and a private key (**id_rsa**) in your user's **.ssh** directory (usually **C:\Users\YourUsername\.ssh**).
 
-![<1.linux_ssh_vscode_generatekey.jpg>](images/1.linux_ssh_vscode_generatekey.jpg)
+![<1.linux_ssh_vscode_generatekey.jpg>](https://github.com/PiyushMittl/Others/blob/main/linux-ssh-vscode/images/1.linux_ssh_vscode_generatekey.jpg)
 
 ![Alt text](images/1.1.linux_ssh_vscode_generatedkeyfiles.jpg)
 
