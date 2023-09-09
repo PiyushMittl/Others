@@ -17,15 +17,15 @@ Replace **"your_email@example.com"** with your email address. This command will 
 
 ![<1.linux_ssh_vscode_generatekey.jpg>](https://github.com/PiyushMittl/Others/blob/main/linux-ssh-vscode/images/1.linux_ssh_vscode_generatekey.jpg)
 
-![Alt text](images/1.1.linux_ssh_vscode_generatedkeyfiles.jpg)
+![Alt text](https://github.com/PiyushMittl/Others/blob/main/linux-ssh-vscode/images/1.1.linux_ssh_vscode_generatedkeyfiles.jpg)
 
 2. **Copy the Public Key to the Linux Server:**
 
 As mentioned earlier, you'll need to copy the contents of your Windows machine's public key (**id_rsa.pub**) to the **~/.ssh/authorized_keys** file on your Linux server.
 
-![Alt text](images/2.1.linux_ssh_vscode_copypubkey.jpg)
+![Alt text](https://github.com/PiyushMittl/Others/blob/main/linux-ssh-vscode/images/2.1.linux_ssh_vscode_copypubkey.jpg)
 
-![Alt text](images/2.2.linux_ssh_vscode_savepubkey.jpg)
+![Alt text](https://github.com/PiyushMittl/Others/blob/main/linux-ssh-vscode/images/2.2.linux_ssh_vscode_savepubkey.jpg)
 
 please provide below permission also (required in case not using root user)
 ```
@@ -49,10 +49,10 @@ Host YourServerName
     User YourUsername
     IdentityFile YourPrivateKeyPath
 ```
-![Alt text](images/3.1.linux_ssh_vscode_configurevscode.jpg)
+![Alt text](https://github.com/PiyushMittl/Others/blob/main/linux-ssh-vscode/images/3.1.linux_ssh_vscode_configurevscode.jpg)
 
 * Save the config file.
-![Alt text](images/3.2.linux_ssh_vscode_configurevscode.jpg)
+![Alt text](https://github.com/PiyushMittl/Others/blob/main/linux-ssh-vscode/images/3.2.linux_ssh_vscode_configurevscode.jpg)
 
 4. **Connect to the Linux Server:**
 
@@ -61,10 +61,10 @@ Host YourServerName
 * You may be prompted to enter your SSH key's passphrase if you set one during key generation.
 * Once connected, you can work with your Linux server directly within Visual Studio Code.
 
-![Alt text](images/4.1.linux_ssh_vscode_connectvm.jpg)
-![Alt text](images/4.2.linux_ssh_vscode_connectvm.jpg)
-![Alt text](images/4.3.linux_ssh_vscode_connectvm.jpg)
-![Alt text](images/4.4.linux_ssh_vscode_explorerview.jpg)
+![Alt text](https://github.com/PiyushMittl/Others/blob/main/linux-ssh-vscode/images/4.1.linux_ssh_vscode_connectvm.jpg)
+![Alt text](https://github.com/PiyushMittl/Others/blob/main/linux-ssh-vscode/images/4.2.linux_ssh_vscode_connectvm.jpg)
+![Alt text](https://github.com/PiyushMittl/Others/blob/main/linux-ssh-vscode/images/4.3.linux_ssh_vscode_connectvm.jpg)
+![Alt text](https://github.com/PiyushMittl/Others/blob/main/linux-ssh-vscode/images/4.4.linux_ssh_vscode_explorerview.jpg)
 That's it! You should now be able to connect to your Linux server from Visual Studio Code using the SSH extension and your SSH key pair.
 
 Trouble shoot guide: 
