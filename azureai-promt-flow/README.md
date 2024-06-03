@@ -44,72 +44,97 @@ after successful resource creation you would see your resource group created as 
 ![1.2.AzureAIPromptFlow_create_RG.jpg](../azureai-promt-flow/images/1.2.AzureAIPromptFlow_create_RG.png)
 
 ## Step2: Create Azure AI Resource
-Follow the steps mentioned from 1.1 till 1.9 (instead of searching "resource group" search "Azure AI Search")
+Follow the steps mentioned from 1.1 till 1.9 (search for "Azure AI Search")
 ![2.1.AzureAIPromptFlow_create_AISearch.jpg](../azureai-promt-flow/images/2.1.AzureAIPromptFlow_create_AISearch.png)
 
 I have created resource group named ```blog-rg``` 
 after successful resource creation you would see your resource group created as given in below reference image:
 ![2.1.AzureAIPromptFlow_create_AISearch](../azureai-promt-flow/images/2.2.AzureAIPromptFlow_create_AISearch.png)
 
+I have created resource group named ```blog-ai-search```  
+after successful resource creation you would see your resource group created as given below: 
 ![3.AzureAIPromptFlow_create_AISearch.png](../azureai-promt-flow/images/3.AzureAIPromptFlow_create_AISearch.png)
 
 
 ## Step3: Create Azure ML Resource
-
+Follow the steps mentioned from 1.1 till 1.9 (search for "Azure Azure Machine Learning") and create Azure Machine Learning resource.
 ![4.1.AzureAIPromptFlow_create_searchcreate_AzureMachineLearning.jpg](../azureai-promt-flow/images/4.1.AzureAIPromptFlow_create_searchcreate_AzureMachineLearning.png)
+
+I have created resource group named ```blog-aml```  
+after successful resource creation you would see your resource group created as given below: 
 ![4.2.AzureAIPromptFlow_create_searchcreate_AzureMachineLearning.jpg](../azureai-promt-flow/images/4.2.AzureAIPromptFlow_create_searchcreate_AzureMachineLearning.png)
 
 ## Step4: Create Model Deployments 
-
+Follow the steps mentioned from 1.1 till 1.9 (search for "Azure OpenAI") and create Azure OpenAI resource.
 ![5.1.AzureAIPromptFlow_create_searchcreate_AzureOpenAI.png](../azureai-promt-flow/images/5.1.AzureAIPromptFlow_create_searchcreate_AzureOpenAI.png)
 
-![](../azureai-promt-flow/images/5.2.AzureAIPromptFlow_create_searchcreate_AzureOpenAI.png)
-![](../azureai-promt-flow/images/5.3.AzureAIPromptFlow_AzureOpenAI_gotoopenaistudio.png)
-![](../azureai-promt-flow/images/5.4.AzureAIPromptFlow_AzureOpenAI_create_deployment.png)
-![](../azureai-promt-flow/images/5.5.AzureAIPromptFlow_AzureOpenAI_create_deployment.png)
-![](../azureai-promt-flow/images/5.6.AzureAIPromptFlow_AzureOpenAI_create_deployment.png)
-![](../azureai-promt-flow/images/5.7.AzureAIPromptFlow_AzureOpenAI_create_deployment.png)
-![](../azureai-promt-flow/images/5.8.AzureAIPromptFlow_AzureOpenAI_create_deployment.png)
+I have created an Azure OpenAI resource named ```blog-openai```  
+after successful resource creation you would see your resource group created as given below: 
+![5.2.AzureAIPromptFlow_create_searchcreate_AzureOpenAI.png](../azureai-promt-flow/images/5.2.AzureAIPromptFlow_create_searchcreate_AzureOpenAI.png)
+Once resource created click on "Go to Azure OpenAI Studio" 
+![5.3.AzureAIPromptFlow_AzureOpenAI_gotoopenaistudio.png](../azureai-promt-flow/images/5.3.AzureAIPromptFlow_AzureOpenAI_gotoopenaistudio.png)
+
+Once Click you will redirect to "Azure OpenAI Studio" landing page.
+Once land to "Azure OpenAI Studio" Click on "Deployments" and "Create new deployment"
+![5.4.AzureAIPromptFlow_AzureOpenAI_gotoopenaistudio.png](../azureai-promt-flow/images/5.4.AzureAIPromptFlow_AzureOpenAI_create_deployment.png)
+Now select and deploy "gpt-35-turbo-16k" model and click "create".
+![5.6.AzureAIPromptFlow_AzureOpenAI_gotoopenaistudio.png](../azureai-promt-flow/images/5.6.AzureAIPromptFlow_AzureOpenAI_create_deployment.png)
+
+Again repeat similar step to "Create new deployment" to deploy "text-embedding-ada-002" model.
+![5.5.AzureAIPromptFlow_AzureOpenAI_gotoopenaistudio.png](../azureai-promt-flow/images/5.5.AzureAIPromptFlow_AzureOpenAI_create_deployment.png)
+Select "text-embedding-ada-002" model
+![5.7.AzureAIPromptFlow_AzureOpenAI_gotoopenaistudio.png](../azureai-promt-flow/images/5.7.AzureAIPromptFlow_AzureOpenAI_create_deployment.png)
+
+Once deployed, you will see two deployment one for gpt-35-turbo-16k and another one for "text-embedding-ada-002" as below
+![5.8.AzureAIPromptFlow_AzureOpenAI_gotoopenaistudio.png](../azureai-promt-flow/images/5.8.AzureAIPromptFlow_AzureOpenAI_create_deployment.png)
 
 ## Step5: Create a Compute Instance 
-![](../azureai-promt-flow/images/6.1.AzureAIPromptFlow_AzureOpenAI_create_compute.png)
-![](../azureai-promt-flow/images/6.2.AzureAIPromptFlow_AzureOpenAI_create_compute.png)
-![](../azureai-promt-flow/images/6.3.AzureAIPromptFlow_AzureOpenAI_create_compute.png)
-![](../azureai-promt-flow/images/6.4.AzureAIPromptFlow_AzureOpenAI_create_compute.png)
-![](../azureai-promt-flow/images/6.5.AzureAIPromptFlow_AzureOpenAI_create_compute.png)
-![](../azureai-promt-flow/images/6.6.AzureAIPromptFlow_AzureOpenAI_create_compute.png)
+Click on the resource group create in our example it is "blog-rg". locate "blog-aml" in resources and click.
+![6.1.AzureAIPromptFlow_AzureOpenAI_create_compute.png](../azureai-promt-flow/images/6.1.AzureAIPromptFlow_AzureOpenAI_create_compute.png)
+Once resource "Azure Machine Learning" resource is open, click on "Launch Studio".
+![6.2.AzureAIPromptFlow_AzureOpenAI_create_compute.png](../azureai-promt-flow/images/6.2.AzureAIPromptFlow_AzureOpenAI_create_compute.png)
+Once redirected to "Azure Machine Learning Studio" click on Asset "Compute" and create new "Compute instance". refer below image for reference:
+![6.3.AzureAIPromptFlow_AzureOpenAI_create_compute.png](../azureai-promt-flow/images/6.3.AzureAIPromptFlow_AzureOpenAI_create_compute.png)
+Enter "Compute name" and click on "Review + Create" 
+![6.4.AzureAIPromptFlow_AzureOpenAI_create_compute.png](../azureai-promt-flow/images/6.4.AzureAIPromptFlow_AzureOpenAI_create_compute.png)
+![6.5.AzureAIPromptFlow_AzureOpenAI_create_compute.png](../azureai-promt-flow/images/6.5.AzureAIPromptFlow_AzureOpenAI_create_compute.png)
+Once compute instance is created, you would see instance name with state as "running" 
+![6.6.AzureAIPromptFlow_AzureOpenAI_create_compute.png](../azureai-promt-flow/images/6.6.AzureAIPromptFlow_AzureOpenAI_create_compute.png)
 
 ## Step6: Azure Open AI 
-![](../azureai-promt-flow/images/7.1.AzureAIPromptFlow_promptflow_connection_create.png)
-![](../azureai-promt-flow/images/7.2.AzureAIPromptFlow_promptflow_connection_create.png)
-![](../azureai-promt-flow/images/7.3.AzureAIPromptFlow_promptflow_connection_create.png)
+![7.1.AzureAIPromptFlow_promptflow_connection_create.png](../azureai-promt-flow/images/7.1.AzureAIPromptFlow_promptflow_connection_create.png)
+![7.2.AzureAIPromptFlow_promptflow_connection_create.png](../azureai-promt-flow/images/7.2.AzureAIPromptFlow_promptflow_connection_create.png)
+![7.3.AzureAIPromptFlow_promptflow_connection_create.png](../azureai-promt-flow/images/7.3.AzureAIPromptFlow_promptflow_connection_create.png)
 
 ## Step7: Cognitive Search 
-![](../azureai-promt-flow/images/8.1.AzureAIPromptFlow_promptflow_connection_azais_create.png)
-![](../azureai-promt-flow/images/8.2.AzureAIPromptFlow_promptflow_connection_azais_create.png)
-![](../azureai-promt-flow/images/8.3.AzureAIPromptFlow_promptflow_connection_azais_create.png)
+![8.1.AzureAIPromptFlow_promptflow_connection_azais_create.png](../azureai-promt-flow/images/8.1.AzureAIPromptFlow_promptflow_connection_azais_create.png)
+![8.2.AzureAIPromptFlow_promptflow_connection_azais_create.png](../azureai-promt-flow/images/8.2.AzureAIPromptFlow_promptflow_connection_azais_create.png)
+![8.3.AzureAIPromptFlow_promptflow_connection_azais_create.png](../azureai-promt-flow/images/8.3.AzureAIPromptFlow_promptflow_connection_azais_create.png)
 
 ## Step8: Azure ML Pipeline
-![](../azureai-promt-flow/images/9.1.AzureAIPromptFlow_promptflow_vectordb_create.png)
-![](../azureai-promt-flow/images/9.2.AzureAIPromptFlow_promptflow_vectordb_create.png)
-![](../azureai-promt-flow/images/9.3.AzureAIPromptFlow_promptflow_vectordb_create.png)
-![](../azureai-promt-flow/images/9.4.AzureAIPromptFlow_promptflow_vectordb_create.png)
-![](../azureai-promt-flow/images/9.5.AzureAIPromptFlow_promptflow_vectordb_create.png)
-![](../azureai-promt-flow/images/9.6.AzureAIPromptFlow_promptflow_vectordb_create.png)
+![9.1.AzureAIPromptFlow_promptflow_vectordb_create.png](../azureai-promt-flow/images/9.1.AzureAIPromptFlow_promptflow_vectordb_create.png)
+![9.2.AzureAIPromptFlow_promptflow_vectordb_create.png](../azureai-promt-flow/images/9.2.AzureAIPromptFlow_promptflow_vectordb_create.png)
+![9.3.AzureAIPromptFlow_promptflow_vectordb_create.png](../azureai-promt-flow/images/9.3.AzureAIPromptFlow_promptflow_vectordb_create.png)
+![9.4.AzureAIPromptFlow_promptflow_vectordb_create.png](../azureai-promt-flow/images/9.4.AzureAIPromptFlow_promptflow_vectordb_create.png)
+![9.5.AzureAIPromptFlow_promptflow_vectordb_create.png](../azureai-promt-flow/images/9.5.AzureAIPromptFlow_promptflow_vectordb_create.png)
+![9.6.AzureAIPromptFlow_promptflow_vectordb_create.png](../azureai-promt-flow/images/9.6.AzureAIPromptFlow_promptflow_vectordb_create.png)
 
 ## Step9: Create Prompt Flow
-![](../azureai-promt-flow/images/10.1.AzureAIPromptFlow_promptflow_flow_create.png)
-![](../azureai-promt-flow/images/10.2.AzureAIPromptFlow_promptflow_flow_create.png)
-![](../azureai-promt-flow/images/10.3.AzureAIPromptFlow_promptflow_flow_create.png)
-![](../azureai-promt-flow/images/10.4.AzureAIPromptFlow_promptflow_flow_create.png)
-![](../azureai-promt-flow/images/10.5.AzureAIPromptFlow_promptflow_flow_create.png)
-![](../azureai-promt-flow/images/10.6.AzureAIPromptFlow_promptflow_flow_create.png)
-![](../azureai-promt-flow/images/10.7.AzureAIPromptFlow_promptflow_flow_create.png)
-![](../azureai-promt-flow/images/10.8.AzureAIPromptFlow_promptflow_flow_create.png)
+![10.1.AzureAIPromptFlow_promptflow_flow_create.png](../azureai-promt-flow/images/10.1.AzureAIPromptFlow_promptflow_flow_create.png)
+![10.2.AzureAIPromptFlow_promptflow_flow_create.png](../azureai-promt-flow/images/10.2.AzureAIPromptFlow_promptflow_flow_create.png)
+![10.3.AzureAIPromptFlow_promptflow_flow_create.png](../azureai-promt-flow/images/10.3.AzureAIPromptFlow_promptflow_flow_create.png)
+![10.4.AzureAIPromptFlow_promptflow_flow_create.png](../azureai-promt-flow/images/10.4.AzureAIPromptFlow_promptflow_flow_create.png)
+![10.5.AzureAIPromptFlow_promptflow_flow_create.png](../azureai-promt-flow/images/10.5.AzureAIPromptFlow_promptflow_flow_create.png)
+![10.6.AzureAIPromptFlow_promptflow_flow_create.png](../azureai-promt-flow/images/10.6.AzureAIPromptFlow_promptflow_flow_create.png)
+![10.7.AzureAIPromptFlow_promptflow_flow_create.png](../azureai-promt-flow/images/10.7.AzureAIPromptFlow_promptflow_flow_create.png)
+![10.8.AzureAIPromptFlow_promptflow_flow_create.png](../azureai-promt-flow/images/10.8.AzureAIPromptFlow_promptflow_flow_create.png)
 
 ## Step10: Generate Prompt Text
-![](../azureai-promt-flow/images/11.1.AzureAIPromptFlow_promptflow_chatwithdsapdf.png)
-![](../azureai-promt-flow/images/11.2.AzureAIPromptFlow_promptflow_chatwithdsapdf.png)
-
 ## Step11: Deploy
+
 ## Step12: Testing
+Click on ```Chat``` button on top right most corner and write your question. Tap arrow icon 
+![](../azureai-promt-flow/images/11.1.AzureAIPromptFlow_promptflow_chatwithdsapdf.png)
+
+Chatbot will answer question based on the vector database created from PDF we have uploaded.
+![](../azureai-promt-flow/images/11.2.AzureAIPromptFlow_promptflow_chatwithdsapdf.png)
