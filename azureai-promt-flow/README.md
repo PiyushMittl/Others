@@ -77,6 +77,7 @@ Once resource created click on "Go to Azure OpenAI Studio"
 Once Click you will redirect to "Azure OpenAI Studio" landing page.
 Once land to "Azure OpenAI Studio" Click on "Deployments" and "Create new deployment"
 ![5.4.AzureAIPromptFlow_AzureOpenAI_gotoopenaistudio.png](../azureai-promt-flow/images/5.4.AzureAIPromptFlow_AzureOpenAI_create_deployment.png)
+
 Now select and deploy "gpt-35-turbo-16k" model and click "create".
 ![5.6.AzureAIPromptFlow_AzureOpenAI_gotoopenaistudio.png](../azureai-promt-flow/images/5.6.AzureAIPromptFlow_AzureOpenAI_create_deployment.png)
 
@@ -102,24 +103,37 @@ Once compute instance is created, you would see instance name with state as "run
 ![6.6.AzureAIPromptFlow_AzureOpenAI_create_compute.png](../azureai-promt-flow/images/6.6.AzureAIPromptFlow_AzureOpenAI_create_compute.png)
 
 ## Step6: Azure Open AI 
+Once Compute Instance is created, Click on "Prompt flow", "Connections" tab and Create "Azure Open AI" connection.
 ![7.1.AzureAIPromptFlow_promptflow_connection_create.png](../azureai-promt-flow/images/7.1.AzureAIPromptFlow_promptflow_connection_create.png)
+Provide required inputs in Azure OpenAI connection as mentioned in below refernce image and click on save button.
 ![7.2.AzureAIPromptFlow_promptflow_connection_create.png](../azureai-promt-flow/images/7.2.AzureAIPromptFlow_promptflow_connection_create.png)
+Once connection is saved, you would see a new Azure OpenAI connection you have created
 ![7.3.AzureAIPromptFlow_promptflow_connection_create.png](../azureai-promt-flow/images/7.3.AzureAIPromptFlow_promptflow_connection_create.png)
 
 ## Step7: Cognitive Search 
+Once Azure OpenAI connection is created, create another Azure AI Search connection.
 ![8.1.AzureAIPromptFlow_promptflow_connection_azais_create.png](../azureai-promt-flow/images/8.1.AzureAIPromptFlow_promptflow_connection_azais_create.png)
+Provide the required input as below.
 ![8.2.AzureAIPromptFlow_promptflow_connection_azais_create.png](../azureai-promt-flow/images/8.2.AzureAIPromptFlow_promptflow_connection_azais_create.png)
+Once details are provided click on save button
 ![8.3.AzureAIPromptFlow_promptflow_connection_azais_create.png](../azureai-promt-flow/images/8.3.AzureAIPromptFlow_promptflow_connection_azais_create.png)
 
 ## Step8: Azure ML Pipeline
+Click on "Prompt flow" then "Vector Index" tax and Create vector index.
 ![9.1.AzureAIPromptFlow_promptflow_vectordb_create.png](../azureai-promt-flow/images/9.1.AzureAIPromptFlow_promptflow_vectordb_create.png)
+Click to Upload Folders and upload folders having suppoerted files. Choose appropriate "Vector store" and "AI Search connection" and click on "Next"
 ![9.2.AzureAIPromptFlow_promptflow_vectordb_create.png](../azureai-promt-flow/images/9.2.AzureAIPromptFlow_promptflow_vectordb_create.png)
+Provide Azure Open AI Connection
 ![9.3.AzureAIPromptFlow_promptflow_vectordb_create.png](../azureai-promt-flow/images/9.3.AzureAIPromptFlow_promptflow_vectordb_create.png)
+Provide Compute details and Click on Create.
 ![9.4.AzureAIPromptFlow_promptflow_vectordb_create.png](../azureai-promt-flow/images/9.4.AzureAIPromptFlow_promptflow_vectordb_create.png)
+Once Click on Create, you would see vector index creating status as Running
 ![9.5.AzureAIPromptFlow_promptflow_vectordb_create.png](../azureai-promt-flow/images/9.5.AzureAIPromptFlow_promptflow_vectordb_create.png)
+Once Vector index creation is done, Status would be updated from Running to Completed
 ![9.6.AzureAIPromptFlow_promptflow_vectordb_create.png](../azureai-promt-flow/images/9.6.AzureAIPromptFlow_promptflow_vectordb_create.png)
 
 ## Step9: Create Prompt Flow
+
 ![10.1.AzureAIPromptFlow_promptflow_flow_create.png](../azureai-promt-flow/images/10.1.AzureAIPromptFlow_promptflow_flow_create.png)
 ![10.2.AzureAIPromptFlow_promptflow_flow_create.png](../azureai-promt-flow/images/10.2.AzureAIPromptFlow_promptflow_flow_create.png)
 ![10.3.AzureAIPromptFlow_promptflow_flow_create.png](../azureai-promt-flow/images/10.3.AzureAIPromptFlow_promptflow_flow_create.png)
