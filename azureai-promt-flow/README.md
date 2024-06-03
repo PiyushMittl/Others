@@ -133,20 +133,25 @@ Once Vector index creation is done, Status would be updated from Running to Comp
 ![9.6.AzureAIPromptFlow_promptflow_vectordb_create.png](../azureai-promt-flow/images/9.6.AzureAIPromptFlow_promptflow_vectordb_create.png)
 
 ## Step9: Create Prompt Flow
-
+Now click on "Prompt flow" then "Flows" and click on "Create"
 ![10.1.AzureAIPromptFlow_promptflow_flow_create.png](../azureai-promt-flow/images/10.1.AzureAIPromptFlow_promptflow_flow_create.png)
+Choose "Multi-Round Q&A on YourData" and click on "Clone". Provide Folder Name and Click on "Clone"
 ![10.2.AzureAIPromptFlow_promptflow_flow_create.png](../azureai-promt-flow/images/10.2.AzureAIPromptFlow_promptflow_flow_create.png)
+Once Clicked on Clone, you will be redirected to Flows.
 ![10.3.AzureAIPromptFlow_promptflow_flow_create.png](../azureai-promt-flow/images/10.3.AzureAIPromptFlow_promptflow_flow_create.png)
+Now locate "modify_query_with_history", choose "Connection" as the connection you have created
 ![10.4.AzureAIPromptFlow_promptflow_flow_create.png](../azureai-promt-flow/images/10.4.AzureAIPromptFlow_promptflow_flow_create.png)
+Choose deployment name as the deployment name you have already created.
 ![10.5.AzureAIPromptFlow_promptflow_flow_create.png](../azureai-promt-flow/images/10.5.AzureAIPromptFlow_promptflow_flow_create.png)
-![10.6.AzureAIPromptFlow_promptflow_flow_create.png](../azureai-promt-flow/images/10.6.AzureAIPromptFlow_promptflow_flow_create.png)
+Now locate "lookup" and locate "mlindex_content" and click on to update this value
 ![10.7.AzureAIPromptFlow_promptflow_flow_create.png](../azureai-promt-flow/images/10.7.AzureAIPromptFlow_promptflow_flow_create.png)
+Choose index_type, mlindex_asset_id and click on "Save"
+![10.6.AzureAIPromptFlow_promptflow_flow_create.png](../azureai-promt-flow/images/10.6.AzureAIPromptFlow_promptflow_flow_create.png)
+Locate "chat_with_context"  and update Connection and deployment_name.
 ![10.8.AzureAIPromptFlow_promptflow_flow_create.png](../azureai-promt-flow/images/10.8.AzureAIPromptFlow_promptflow_flow_create.png)
 
-## Step10: Generate Prompt Text
-## Step11: Deploy
-
 ## Step12: Testing
+Now we can test the chat bot
 Click on ```Chat``` button on top right most corner and write your question. Tap arrow icon 
 ![](../azureai-promt-flow/images/11.1.AzureAIPromptFlow_promptflow_chatwithdsapdf.png)
 
