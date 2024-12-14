@@ -25,18 +25,37 @@ This project captures soil moisture data from IoT devices installed on a farmer'
             DeviceId,
             MoistureLevel
         FROM
-            IoTHubInput
+            IoTHubInput TIMESTAMP BY EventEnqueuedUtcTime
         WHERE
             MoistureLevel < @Threshold
+    ),
+    TotalDevices AS (
+        SELECT
+            COUNT(*) AS TotalDeviceCount
+        FROM
+            IoTHubInput TIMESTAMP BY EventEnqueuedUtcTime
+        GROUP BY
+            TUMBLINGWINDOW(minute, 5)
+    ),
+    LowMoistureDevices AS (
+        SELECT
+            COUNT(*) AS LowMoistureDeviceCount
+        FROM
+            FilteredDevices
+        GROUP BY
+            TUMBLINGWINDOW(minute, 5)
     )
-    SELECT 
-        COUNT(*) * 100.0 / (SELECT COUNT(*) FROM IoTHubInput) AS LowMoisturePercentage
-    INTO 
+    SELECT
+        LowMoistureDevices.LowMoistureDeviceCount * 100.0 / TotalDevices.TotalDeviceCount AS LowMoisturePercentage
+    INTO
         EventHubOutput
     FROM
-        FilteredDevices
-    HAVING 
-        COUNT(*) * 100.0 / (SELECT COUNT(*) FROM IoTHubInput) > 75
+        LowMoistureDevices
+    CROSS JOIN
+        TotalDevices
+    HAVING
+        LowMoistureDevices.LowMoistureDeviceCount * 100.0 / TotalDevices.TotalDeviceCount > 75
+
     ```
   - Send the result to an Azure Fucntion for further processing.
 ---
