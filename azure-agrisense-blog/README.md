@@ -20,15 +20,21 @@ This project captures soil moisture data from IoT devices installed on a farmer'
     - The percentage of devices reporting low moisture levels.
   - Example Stream Analytics Query:
     ```sql
-    SELECT
-      COUNT(*) AS LowMoistureDevices,
-      COUNT(*) * 100.0 / TotalDevices AS LowMoisturePercentage
-    INTO
-      OutputSink
-    FROM
-      InputTelemetry TIMESTAMP BY EventEnqueuedUtcTime
-    WHERE
-      Moisture < @Threshold
+WITH FilteredDevice AS (
+  SELECT 
+    DeviceId,
+    MoistureLevel
+  FROM
+    IoTHubInput
+  WHERE
+    MoistureLevel < <ThreshHold>
+)
+SELECT 
+  COUNT(*) * 100.0 / (SELECT COUNT(*) FROM IoTHubInput) AS LowMoisturePercentage
+INTO 
+  OutputStream
+FROM
+  FilteredDevices
     ```
 
 ---
