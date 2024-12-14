@@ -125,5 +125,5 @@ def send_notification(message):
 
 ---
 
-Let me know if you need further modifications!
+
 
