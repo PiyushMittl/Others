@@ -47,7 +47,6 @@ This project captures soil moisture data from IoT devices installed on a farmer'
 
 ```python
 import json
-from azure.servicebus import ServiceBusClient
 from azure.notificationhubs import NotificationHubClient
 
 def main(event: dict):
@@ -57,6 +56,9 @@ def main(event: dict):
 
 def send_notification(message):
     client = NotificationHubClient("<ConnectionString>", "<HubName>")
+    notification = {
+        "message": message
+    }
     client.send_notification("all", notification)
 ```
 ---
