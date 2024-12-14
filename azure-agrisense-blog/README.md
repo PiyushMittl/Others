@@ -3,8 +3,7 @@
 This project captures soil moisture data from IoT devices installed on a farmer's land and sends a mobile notification if 75% of devices report moisture below a specified threshold.
 
 HLD/Flow Diagram:  
-![image]([https://github.com/user-attachments/assets/747d9c4a-a36a-4719-95d1-e8fde43867d8](https://github.com/PiyushMittl/Others/blob/main/azure-agrisense-blog/images/agrisense-hld.png)
-
+![image](https://github.com/PiyushMittl/Others/blob/main/azure-agrisense-blog/images/agrisense-hld.png)
 
 ## Steps to Create the Solution on Azure
 
