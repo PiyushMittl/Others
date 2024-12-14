@@ -36,7 +36,7 @@ This project captures soil moisture data from IoT devices installed on a farmer'
     FROM
       FilteredDevices
     ```
-
+  - Send the result to an Azure Fucntion for further processing.
 ---
 
 ### 3. Trigger Notifications
