@@ -53,8 +53,9 @@ from azure.notificationhubs import NotificationHubClient
 
 def main(event: dict):
     data = json.loads(event)
-    if data['LowMoisturePercentage'] >= 75:
-        send_notification("Low soil moisture detected in 75% of devices")
+     low_moisture_percentage = data.get('LowMoisturePercentage', 0)
+     print(f"LowMoisturePercentage received: {low_moisture_percentage}%")
+     send_notification("Low soil moisture detected in 75% or more devices.")
 
 def send_notification(message):
     client = NotificationHubClient("<ConnectionString>", "<HubName>")
