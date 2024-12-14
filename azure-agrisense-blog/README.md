@@ -44,7 +44,20 @@ This project captures soil moisture data from IoT devices installed on a farmer'
 - **Actions**:
   - Trigger a notification when more than 75% of devices report low moisture.
   - Integrate with notification services like Twilio, Firebase Cloud Messaging (FCM), or Azure Notification Hubs.
+``` 
+import json
+from azure.servicebus import ServiceBusClient
+from azure.notificationhubs import NotificationHubClient
 
+def main(event: dict):
+  data = json.loads(event)
+if data['LowMoisturePercentage'] >= 75
+send_notification("Low soil moisture detected in 75% of devices")
+
+def send_notification(message)
+ client = NotificationHubClient("<ConnectionString>", "<HubName>")
+client.send_notification("all",notification)
+```
 ---
 
 ### 4. Store Data for Historical Analysis
