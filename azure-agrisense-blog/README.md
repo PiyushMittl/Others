@@ -20,15 +20,23 @@ This project captures soil moisture data from IoT devices installed on a farmer'
     - The percentage of devices reporting low moisture levels.
   - Example Stream Analytics Query (running every 1hr to check data and trigger Azure Function) :
     ```sql
-    SELECT
-        COUNT(*) AS TotalDevices,
-        COUNT(CASE WHEN MoistureLevel < @Threshold THEN 1 END) * 100.0 / COUNT(*) AS LowMoisturePercentage
-    INTO
-        Output
+    WITH FilteredDevices AS (
+        SELECT 
+            DeviceId,
+            MoistureLevel
+        FROM
+            IoTHubInput
+        WHERE
+            MoistureLevel < @Threshold
+    )
+    SELECT 
+        COUNT(*) * 100.0 / (SELECT COUNT(*) FROM IoTHubInput) AS LowMoisturePercentage
+    INTO 
+        EventHubOutput
     FROM
-        IoTHubInput TIMESTAMP BY EventEnqueuedUtcTime
-    GROUP BY
-        TUMBLINGWINDOW(hour, 1)
+        FilteredDevices
+    HAVING 
+        COUNT(*) * 100.0 / (SELECT COUNT(*) FROM IoTHubInput) > 75
     ```
   - Send the result to an Azure Fucntion for further processing.
 ---
