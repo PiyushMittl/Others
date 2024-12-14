@@ -28,7 +28,7 @@ This project captures soil moisture data from IoT devices installed on a farmer'
     FROM
         IoTHubInput TIMESTAMP BY EventEnqueuedUtcTime
     GROUP BY
-        TUMBLINGWINDOW(hour, 1)
+        TUMBLINGWINDOW(minute, 1)
     ```
   - Send the result to an Azure Fucntion for further processing.
 ---
