@@ -38,7 +38,7 @@ A **queue** in Azure Service Bus implements the **point-to-point** messaging pat
 #### Queue Workflow Diagram:
 - A producer sends messages to a queue, which are consumed by one consumer per message:
 
-![Queue Workflow Diagram](path/to/queue-diagram.png)
+![Queue Workflow Diagram](https://github.com/PiyushMittl/Others/blob/main/azure-queue-vs-topic-blog/images/1.1.azure-queue-vs-topic.png)
 
 ---
 
@@ -62,7 +62,7 @@ A **topic** in Azure Service Bus implements the **publish-subscribe** messaging 
 #### Topic Workflow Diagram:
 - A producer sends messages to a topic, which are delivered to all subscriptions:
 
-![Topic Workflow Diagram](path/to/topic-diagram.png)
+![Topic Workflow Diagram]([path/to/topic-diagram.png](https://github.com/PiyushMittl/Others/blob/main/azure-queue-vs-topic-blog/images/1.2.azure-queue-vs-topic.png))
 
 ---
 
