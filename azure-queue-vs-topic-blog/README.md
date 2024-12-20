@@ -62,7 +62,7 @@ A **topic** in Azure Service Bus implements the **publish-subscribe** messaging 
 #### Topic Workflow Diagram:
 - A producer sends messages to a topic, which are delivered to all subscriptions:
 
-![Topic Workflow Diagram]([path/to/topic-diagram.png](https://github.com/PiyushMittl/Others/blob/main/azure-queue-vs-topic-blog/images/1.2.azure-queue-vs-topic.png))
+![Topic Workflow Diagram](https://github.com/PiyushMittl/Others/blob/main/azure-queue-vs-topic-blog/images/1.2.azure-queue-vs-topic.png)
 
 ---
 
