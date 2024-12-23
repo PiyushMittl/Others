@@ -40,7 +40,7 @@ Azure Data Share operates on the principle of data providers and consumers:
 
 Below is an image that highlights the supported dataset types:
 
-![Select Dataset Type](attachment:file-6KGuXr2Exhz7euhkfd6jZk)
+![Select Dataset Type]([attachment:file-6KGuXr2Exhz7euhkfd6jZk](https://github.com/PiyushMittl/Others/blob/main/azure-datashare-blog/images/1.datasets.png)
 
 ---
 
