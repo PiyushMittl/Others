@@ -72,7 +72,7 @@ az provider register --namespace Microsoft.DataShare
 
 Below is a diagram showing how data is shared across organizations:
 
-![Data Sharing Workflow](attachment:file-H61eohBoQa29bGvbK5JPi6)
+![Data Sharing Workflow](https://github.com/PiyushMittl/Others/blob/main/azure-datashare-blog/images/2.blockdiagram.png)
 
 #### **3. Accept the Invitation**
 Consumers will receive an invitation in their Azure portal. They need to accept the share and specify a destination storage account to access the data.
@@ -82,7 +82,7 @@ Use the Azure Portal to monitor activity logs, manage datasets, and revoke acces
 
 Here is an illustration of the invitation process:
 
-![Invitation Process](attachment:file-XQd7KSw9fYrRwqy7boSnZ2)
+![Invitation Process](https://github.com/PiyushMittl/Others/blob/main/azure-datashare-blog/images/3.msofficial.png)
 
 ---
 
@@ -101,7 +101,7 @@ Imagine you are a retailer sharing sales data with a supplier:
 
 Below is a diagram that summarizes how data flows between providers and consumers:
 
-![Data Flow Summary](attachment:file-7bDg4fkmstn9ARwCTjV3eL)
+![Data Flow Summary](https://github.com/PiyushMittl/Others/blob/main/azure-datashare-blog/images/4.AzureServiceHLD.png)
 
 ---
 
