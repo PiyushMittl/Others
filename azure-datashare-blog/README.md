@@ -13,6 +13,8 @@ In today’s data-driven world, secure and efficient data sharing is critical fo
   
 ![Data Sharing Workflow](https://github.com/PiyushMittl/Others/blob/main/azure-datashare-blog/images/2.blockdiagram.png)
 
+---
+
 ### **What is Azure Data Share?**
 
 Azure Data Share is a fully managed service designed to simplify and secure the sharing of data between organizations. It allows organizations to share their data in real time or through scheduled updates without building complex pipelines or compromising security.
