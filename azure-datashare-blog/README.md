@@ -3,10 +3,13 @@
 In today’s data-driven world, secure and efficient data sharing is critical for collaboration between organizations. Azure Data Share provides a secure, scalable, and easy-to-manage service for sharing data across organizations. This blog will guide you through the fundamentals of Azure Data Share, its benefits, and how to get started.
 
 ---
-### **Possible Way of Data Sharing Today:**
-- **Web Based API**
-- **File Store or Blob Share**
-- **Email Transfer**
+
+### **Why Use Azure Data Share?**
+
+1. **Simplified Data Sharing:** No need for custom APIs or complex pipelines.
+2. **Improved Collaboration:** Share datasets with partners, suppliers, or internal teams efficiently.
+3. **Cost Savings:** Avoid duplicate storage and data movement costs.
+4. **Compliance:** Ensures secure and governed data sharing, meeting regulatory requirements.
   
 ![Data Sharing Workflow](https://github.com/PiyushMittl/Others/blob/main/azure-datashare-blog/images/2.blockdiagram.png)
 
