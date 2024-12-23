@@ -110,7 +110,7 @@ Imagine you are a retailer sharing sales data with a supplier:
    - The supplier accepts the invitation and stores the data in their Azure environment.
    - They can analyze the data without needing additional storage or pipelines.
 
-Below is a diagram that summarizes how data flows between providers and consumers:
+Below is a diagram that summarizes how data flows between providers and consumers using Azure Services:
 
 ![Data Flow Summary](https://github.com/PiyushMittl/Others/blob/main/azure-datashare-blog/images/4.AzureServiceHLD.png)
 
