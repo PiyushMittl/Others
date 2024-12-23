@@ -3,6 +3,12 @@
 In today’s data-driven world, secure and efficient data sharing is critical for collaboration between organizations. Azure Data Share provides a secure, scalable, and easy-to-manage service for sharing data across organizations. This blog will guide you through the fundamentals of Azure Data Share, its benefits, and how to get started.
 
 ---
+### **Possible Way of Data Sharing Today:**
+- **Web Based API**
+- **File Store or Blob Share**
+- **Email Transfer**
+  
+![Data Sharing Workflow](https://github.com/PiyushMittl/Others/blob/main/azure-datashare-blog/images/2.blockdiagram.png)
 
 ### **What is Azure Data Share?**
 
@@ -72,7 +78,7 @@ az provider register --namespace Microsoft.DataShare
 
 Below is a diagram showing how data is shared across organizations:
 
-![Data Sharing Workflow](https://github.com/PiyushMittl/Others/blob/main/azure-datashare-blog/images/2.blockdiagram.png)
+
 
 #### **3. Accept the Invitation**
 Consumers will receive an invitation in their Azure portal. They need to accept the share and specify a destination storage account to access the data.
