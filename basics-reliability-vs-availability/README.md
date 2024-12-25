@@ -2,7 +2,7 @@
 
 In the world of technology and system design, two terms often come up when discussing performance and user experience: **reliability** and **availability**. While they are closely related, they address different aspects of a system's performance. Understanding the distinction between the two is essential for designing robust, user-friendly systems. In this blog, we'll dive into what reliability and availability mean, how they differ, and why both are crucial.
 
-![1.create-sc-ado-spn-projectsettings.png](https://github.com/PiyushMittl/Others/blob/main/create-sc-ado-spn/images/1.create-sc-ado-spn-projectsettings.png)
+![reliabilityvsavailability.png](https://github.com/PiyushMittl/Others/blob/main/basics-reliability-vs-availability/images/reliabilityvsavailability.png)
 ---
 
 ### What is Reliability?
