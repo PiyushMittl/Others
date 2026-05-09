@@ -38,27 +38,7 @@ When you type `order.eus.contoso.azure.com` into your browser, a complex but ele
 
 DNS (Domain Name System) is organized as a hierarchical tree, much like a file system:
 
-```
-                                                                                                            . (Root)
-                                                                                                               |
-                                                                                        +----------------------+------------------+
-                                                                                        |                                         |
-                                                                                    .com (TLD/DNS)                              .net (TLD/DNS)
-                                                                                        |                                          
-                                                                          +-------------+--------------+
-                                                                          |                            |
-                                                                    azure.com (SLD/DNS)           microsoft.com (SLD/DNS)
-                                                                          |
-                                                                contoso.azure.com (SLD/DNS)
-                                                                          |
-                                    +-------------------------------------+---------------------------+
-                                    |                                                                 |
-                        eus.contoso.azure.com (SLD/DNS)                                             sea.contoso.azure.com (SLD/DNS)                                         
-                                    |                                                                 |
-                        +-----------+------------------+                                +-------------+----------------+
-                        |                              |                                |                              |                                      
-           order.eus.contoso.azure.com (A)  payment.eus.contoso.azure.com (A)      order.sea.contoso.azure.com (A)  payment.sea.contoso.azure.com (A)
-```
+![Queue Workflow Diagram](https://github.com/PiyushMittl/Others/blob/main/azure-dns-blog/images/1.dns-parent-chield-hierarichy.png)
 
 **Full FQDNs:**
 - `order.eus.contoso.azure.com`
