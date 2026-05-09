@@ -1,5 +1,18 @@
 ## Azure DNS Zones Explained
 
+---
+
+## Table of Contents
+
+1. [Azure DNS Zones Explained](#azure-dns-zones-explained)
+2. [Delegation vs Flat Structure](#delegation-vs-flat-structure)
+3. [Cross-Subscription DNS Management](#cross-subscription-dns-management)
+4. [Practical Implementation Guide](#practical-implementation-guide)
+5. [Best Practices](#best-practices)
+6. [Troubleshooting](#troubleshooting)
+
+---
+
 ### What is a DNS Zone?
 
 A **DNS zone** is a management boundary in Azure that represents a domain (like `contoso.azure.com`). It's a container for DNS records.
