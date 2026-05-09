@@ -203,6 +203,8 @@ T+35ms| ✅ Resolution complete                     |
 
 ### Why This Is Absolutely Required
 
+![DNS NS Hierarichy Diagram](https://github.com/PiyushMittl/Others/blob/main/azure-dns-blog/images/1.dns-parent-chield-hierarichy.png)
+
 ```
 Child Zone Created → Azure Assigns Name Servers → You MUST Add to Parent
 
