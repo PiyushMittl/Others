@@ -38,7 +38,7 @@ When you type `order.eus.contoso.azure.com` into your browser, a complex but ele
 
 DNS (Domain Name System) is organized as a hierarchical tree, much like a file system:
 
-![Queue Workflow Diagram](https://github.com/PiyushMittl/Others/blob/main/azure-dns-blog/images/1.dns-parent-chield-hierarichy.png)
+![DNS Hierarichy Diagram](https://github.com/PiyushMittl/Others/blob/main/azure-dns-blog/images/1.dns-parent-chield-hierarichy.png)
 
 **Full FQDNs:**
 - `order.eus.contoso.azure.com`
