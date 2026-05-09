@@ -32,7 +32,7 @@ When you type `order.eus.contoso.azure.com` into your browser, a complex but ele
 
 DNS (Domain Name System) is organized as a hierarchical tree, much like a file system:
 
-![DNS Hierarichy Diagram](https://github.com/PiyushMittl/Others/blob/main/azure-dns-blog/images/1.dns-parent-chield-hierarichy.png)
+![DNS Hierarichy Diagram](https://github.com/PiyushMittl/Others/blob/main/azure-dns-blog/images/1.dns-parent-child-hierarichy.png)
 
 **Full FQDNs:**
 - `order.eus.contoso.azure.com`
@@ -197,7 +197,7 @@ T+35ms| ✅ Resolution complete                     |
 
 ### Why This Is Absolutely Required
 
-![DNS NS Hierarichy Diagram](https://github.com/PiyushMittl/Others/blob/main/azure-dns-blog/images/2.dns-parent-chield-ns-hierarichy.png)
+![DNS NS Hierarichy Diagram](https://github.com/PiyushMittl/Others/blob/main/azure-dns-blog/images/2.dns-parent-child-ns-hierarichy.png)
 
 ```
 Child Zone Created → Azure Assigns Name Servers → You MUST Add to Parent
