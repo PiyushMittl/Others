@@ -9,12 +9,6 @@
 1. [Introduction](#introduction)
 2. [DNS Hierarchy Basics](#dns-hierarchy-basics)
 3. [How DNS Resolution Works](#how-dns-resolution-works)
-4. [Azure DNS Zones Explained](#azure-dns-zones-explained)
-5. [Delegation vs Flat Structure](#delegation-vs-flat-structure)
-6. [Cross-Subscription DNS Management](#cross-subscription-dns-management)
-7. [Practical Implementation Guide](#practical-implementation-guide)
-8. [Best Practices](#best-practices)
-9. [Troubleshooting](#troubleshooting)
 
 ---
 
