@@ -209,14 +209,14 @@ In enterprise environments, you often have:
 ### Architecture
 
 ```
-┌─────────────────────────────────────────────────────┐
-│ Subscription: Global-DNS-contosos                │
-│ ┌─────────────────────────────────────────────┐     │
-│ │ DNS Zone: contoso.azure.com              │     │
-│ │ ├─ A: order.ne → 52.x.x.x                   │     │
-│ │ ├─ A: order.eus → 13.x.x.x                  │     │
-│ │ └─ A: order.eus2 → 20.x.x.x                 │     │
-│ └─────────────────────────────────────────────┘     │
+┌─────────────────────────────────────────────────────-┐
+│ Subscription: Global-DNS-contosos                    │
+│ ┌─────────────────────────────────────────────┐      │
+│ │ DNS Zone: contoso.azure.com                 │      │
+│ │ ├─ A: order.ne → 52.x.x.x                   │      │
+│ │ ├─ A: order.eus → 13.x.x.x                  │      │
+│ │ └─ A: order.eus2 → 20.x.x.x                 │      │
+│ └─────────────────────────────────────────────┘      │
 │                       ↑                              │
 │                       │ DNS Zone Contributor         │
 │                       │ (RBAC Permission)            │
