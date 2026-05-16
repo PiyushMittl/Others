@@ -8,34 +8,6 @@ The 2PC protocol ensures atomicity across distributed systems:
 - **Phase 1 (Prepare)**: Transaction manager asks all participants to prepare (validate and lock resources)
 - **Phase 2 (Commit/Rollback)**: If all participants are ready, commit; otherwise, rollback all
 
-```mermaid
-sequenceDiagram
-    participant TM as Transaction Manager
-    participant DB1 as Database 1
-    participant DB2 as Database 2
-    participant DB3 as Database 3
-
-    Note over TM,DB3: Phase 1: PREPARE
-    TM->>DB1: PREPARE
-    DB1-->>TM: READY ✓
-    TM->>DB2: PREPARE
-    DB2-->>TM: READY ✓
-    TM->>DB3: PREPARE
-    DB3-->>TM: READY ✓
-
-    Note over TM,DB3: All participants ready
-    Note over TM,DB3: Phase 2: COMMIT
-
-    TM->>DB1: COMMIT
-    DB1-->>TM: COMMITTED ✓
-    TM->>DB2: COMMIT
-    DB2-->>TM: COMMITTED ✓
-    TM->>DB3: COMMIT
-    DB3-->>TM: COMMITTED ✓
-
-    Note over TM,DB3: Transaction Complete
-```
-
 ![How Row Locking Works](https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/XAtransactions-blog/images/1.xa-2pc-protocol.png)
 
 *Figure 1: Two-Phase Commit Protocol - Transaction Manager coordinates with multiple database participants*
