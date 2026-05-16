@@ -21,35 +21,6 @@ The 2PC protocol ensures atomicity across distributed systems:
 <details>
 <summary>📊 Click here if diagram above is not visible (Text Version)</summary>
 
-```
-Timeline: Row Locking with Two Transactions
-=============================================
-
-Initial State: Account id=1, Balance = 1000
-
-Time  | Transaction T1              | Database State           | Transaction T2
-------|----------------------------|--------------------------|---------------------------
-t1    | BEGIN / XA START           |                          |
-t2    | UPDATE balance - 100       | 🔒 LOCKED by T1          |
-      |                            | Uncommitted: 900         |
-      |                            | Committed: 1000          |
-t3    |                            |                          | BEGIN / XA START
-t4    |                            |                          | SELECT balance
-      |                            | Returns: 1000 ──────────>| (sees committed value)
-t5    |                            |                          | UPDATE balance - 50
-      |                            |                          | ⏳ BLOCKED (waiting...)
-t6    | XA PREPARE                 | 🔒 STILL LOCKED by T1    |
-t7    | XA COMMIT                  | ✅ Lock Released          |
-      |                            | Committed: 900           |
-t8    |                            | 🔒 LOCKED by T2          | Unblocked! Lock acquired
-      |                            | Reads: 900               | Calculates: 900 - 50
-t9    |                            |                          | XA PREPARE
-t10   |                            |                          | XA COMMIT
-      |                            | ✅ Final: 850             |
-
-Result: 1000 - 100 - 50 = 850 ✓
-```
-
 **Key Points:**
 - 🔒 = Row Lock Active
 - ⏳ = Transaction Waiting
