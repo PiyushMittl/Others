@@ -10,17 +10,13 @@ The 2PC protocol ensures atomicity across distributed systems:
 - **Phase 1 (Prepare)**: Transaction manager asks all participants to prepare (validate and lock resources)
 - **Phase 2 (Commit/Rollback)**: If all participants are ready, commit; otherwise, rollback all
 
-<div align="center">
-  <img src="https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/XAtransactions-blog/images/1.xa-2pc-protocol.png" alt="Two-Phase Commit Protocol" width="900"/>
-</div>
+![1.xa-2pc-protocol.png](https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/XAtransactions-blog/images/1.xa-2pc-protocol.png)
 
 *Figure 1: Two-Phase Commit Protocol - Transaction Manager coordinates with multiple database participants*
 
 ## Understanding Row Locking in XA Transactions
 
-<div align="center">
-  <img src="https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/XAtransactions-blog/images/2.xa-understanding-xa.png" alt="Row Locking Example" width="1000"/>
-</div>
+![2.xa-understanding-xa.png](https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/XAtransactions-blog/images/2.xa-understanding-xa.png)
 
 *Figure 2: Row Locking Example - Two transactions (T1 and T2) competing for the same row with lock wait behavior*
 
@@ -128,9 +124,7 @@ XA COMMIT 'xid_001';
 
 ### Practical Example:
 
-<div align="center">
-  <img src="https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/XAtransactions-blog/images/3.xa-completedexample.png" alt="XA Complete Example" width="950"/>
-</div>
+![3.xa-completedexample.png](https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/XAtransactions-blog/images/3.xa-completedexample.png)
 
 #### Example Scenario (Initial Balance = 1000):
 **Step-by-Step Flow:**
@@ -214,9 +208,7 @@ SELECT id, balance FROM accounts WHERE id = 1;
 
 **Example: Distributed transaction across two databases**
 
-<div align="center">
-  <img src="https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/XAtransactions-blog/images/4.xa-tm-distributed.png" alt="Distributed XA Transaction" width="950"/>
-</div>
+![4.xa-tm-distributed.png](https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/XAtransactions-blog/images/4.xa-tm-distributed.png)
 
 *Figure 3: Distributed XA Transaction - Money transfer coordinated across two separate databases*
 
@@ -246,9 +238,7 @@ XA PREPARE 'transfer_001', 'db2', 1;
 
 **Commit or Rollback both (atomicity guaranteed)**
 
-<div align="center">
-  <img src="https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/XAtransactions-blog/images/5.xa-mysql-xa-lifecycle.png" alt="MySQL XA Lock Lifecycle" width="1100"/>
-</div>
+![5.xa-mysql-xa-lifecycle.png](https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/XAtransactions-blog/images/5.xa-mysql-xa-lifecycle.png)
 
 *Figure 4: MySQL XA Lock Lifecycle - Locks acquired during SQL operations and held until XA COMMIT*
 
@@ -404,9 +394,7 @@ SELECT id, balance FROM accounts WHERE id = 1;
 
 ### Lock Lifecycle in PostgreSQL Prepared Transactions:
 
-<div align="center">
-  <img src="https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/XAtransactions-blog/images/6.xa-pg-prepared-lifecycle.png" alt="PostgreSQL Prepared Transaction Lock Lifecycle" width="1100"/>
-</div>
+![6.xa-pg-prepared-lifecycle.png](https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/XAtransactions-blog/images/6.xa-pg-prepared-lifecycle.png)
 
 *Figure 5: PostgreSQL Prepared Transaction Lock Lifecycle - Locks persist even after connection closes*
 
