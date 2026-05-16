@@ -49,6 +49,8 @@ sequenceDiagram
     T2->>DB: XA COMMIT / COMMIT
     Note over DB: ✅ Final Balance = 850<br/>(1000 - 100 - 50)
 ```
+![How Row Locking Works](https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/XAtransactions-blog/images/2.xa-understanding-xa.png)
+
 *Figure 2: Row Locking Example - Two transactions (T1 and T2) competing for the same row with lock wait behavior*
 
 <details>
@@ -184,7 +186,7 @@ XA COMMIT 'xid_001';
 
 ### Practical Example:
 
-![How Row Locking Works](./images/row-locking-diagram.png)
+![How Row Locking Works](https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/XAtransactions-blog/images/3.xa-completedexample.png)
 
 #### Example Scenario (Initial Balance = 1000):
 **Step-by-Step Flow:**
