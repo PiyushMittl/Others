@@ -14,41 +14,6 @@ The 2PC protocol ensures atomicity across distributed systems:
 
 ## Understanding Row Locking in XA Transactions
 
-```mermaid
-sequenceDiagram
-    participant T1 as Transaction T1
-    participant DB as Database<br/>(Account id=1)
-    participant T2 as Transaction T2
-
-    Note over DB: Initial Balance = 1000
-
-    T1->>DB: BEGIN / XA START
-    T1->>DB: UPDATE balance = balance - 100
-    Note over DB: 🔒 Row Locked by T1<br/>Uncommitted: 900<br/>Committed: 1000
-
-    T2->>DB: BEGIN / XA START
-    T2->>DB: SELECT balance (READ COMMITTED)
-    DB-->>T2: Returns 1000 (last committed)
-    Note over T2: T2 sees committed value only
-
-    T2->>DB: UPDATE balance = balance - 50
-    Note over T2,DB: ⏳ T2 BLOCKED - Waiting for T1's lock
-
-    Note over T1,DB: T1 continues...
-    T1->>DB: XA PREPARE / PREPARE
-    Note over DB: 🔒 Lock STILL held by T1
-
-    T1->>DB: XA COMMIT / COMMIT
-    Note over DB: ✅ Lock Released<br/>New Committed Value: 900
-
-    Note over T2,DB: T2 unblocked, proceeds
-    DB->>T2: Lock acquired
-    Note over DB: 🔒 Row Locked by T2<br/>T2 reads latest: 900<br/>Calculates: 900 - 50 = 850
-
-    T2->>DB: XA PREPARE / PREPARE
-    T2->>DB: XA COMMIT / COMMIT
-    Note over DB: ✅ Final Balance = 850<br/>(1000 - 100 - 50)
-```
 ![How Row Locking Works](https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/XAtransactions-blog/images/2.xa-understanding-xa.png)
 
 *Figure 2: Row Locking Example - Two transactions (T1 and T2) competing for the same row with lock wait behavior*
@@ -270,39 +235,6 @@ SELECT id, balance FROM accounts WHERE id = 1;
 
 **Example: Distributed transaction across two databases**
 
-```mermaid
-graph TB
-    subgraph "Transaction Manager"
-        TM[Transaction Coordinator]
-    end
-
-    subgraph "Database 1"
-        DB1[Account ID: 1<br/>Balance: 1000]
-        DB1_OP["-100 (Debit)"]
-        DB1_NEW[New Balance: 900]
-    end
-
-    subgraph "Database 2"
-        DB2[Account ID: 2<br/>Balance: 500]
-        DB2_OP["+100 (Credit)"]
-        DB2_NEW[New Balance: 600]
-    end
-
-    TM -->|XA START/PREPARE| DB1
-    TM -->|XA START/PREPARE| DB2
-    DB1 --> DB1_OP --> DB1_NEW
-    DB2 --> DB2_OP --> DB2_NEW
-    DB1_NEW -->|READY| TM
-    DB2_NEW -->|READY| TM
-    TM -->|XA COMMIT| DB1_NEW
-    TM -->|XA COMMIT| DB2_NEW
-
-    style TM fill:#4CAF50,stroke:#333,stroke-width:2px,color:#fff
-    style DB1 fill:#2196F3,stroke:#333,stroke-width:2px,color:#fff
-    style DB2 fill:#2196F3,stroke:#333,stroke-width:2px,color:#fff
-    style DB1_NEW fill:#8BC34A,stroke:#333,stroke-width:2px
-    style DB2_NEW fill:#8BC34A,stroke:#333,stroke-width:2px
-```
 ![How Row Locking Works](https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/XAtransactions-blog/images/4.xa-tm-distributed.png)
 *Figure 3: Distributed XA Transaction - Money transfer coordinated across two separate databases*
 
