@@ -404,7 +404,10 @@ SELECT id, balance FROM accounts WHERE id = 1;
 
 ### Lock Lifecycle in PostgreSQL Prepared Transactions:
 
-![How Row Locking Works](https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/XAtransactions-blog/images/6.xa-pg-prepared-lifecycle.png)
+<div align="center">
+  <img src="https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/XAtransactions-blog/images/6.xa-pg-prepared-lifecycle.png" alt="PostgreSQL Prepared Transaction Lock Lifecycle" width="1100"/>
+</div>
+
 *Figure 5: PostgreSQL Prepared Transaction Lock Lifecycle - Locks persist even after connection closes*
 
 **Understanding when locks are acquired and released**
