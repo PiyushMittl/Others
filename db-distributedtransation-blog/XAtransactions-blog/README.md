@@ -84,6 +84,11 @@ XA ROLLBACK 'xid';
 XA COMMIT 'xid' ONE PHASE;
 ```
 
+![5.xa-mysql-xa-lifecycle.png](https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/XAtransactions-blog/images/5.xa-mysql-xa-lifecycle.png)
+
+*Figure 3: MySQL XA Lock Lifecycle - Locks acquired during SQL operations and held until XA COMMIT*
+
+
 ### Example:
 ```sql
 -- 1. XA START - No locks yet
@@ -112,6 +117,7 @@ XA COMMIT 'xid_001';
 ### Practical Example:
 
 ![3.xa-completedexample.png](https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/XAtransactions-blog/images/3.xa-completedexample.png)
+*Figure 3: Practical Example of XA Transaction Lifecycle*
 
 #### Example Scenario (Initial Balance = 1000):
 **Step-by-Step Flow:**
@@ -197,7 +203,7 @@ SELECT id, balance FROM accounts WHERE id = 1;
 
 ![4.xa-tm-distributed.png](https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/XAtransactions-blog/images/4.xa-tm-distributed.png)
 
-*Figure 3: Distributed XA Transaction - Money transfer coordinated across two separate databases*
+*Figure 5: Distributed XA Transaction - Money transfer coordinated across two separate databases*
 
 **Database 1 - Transfer money out**
 ```sql
@@ -224,10 +230,6 @@ XA PREPARE 'transfer_001', 'db2', 1;
 ```
 
 **Commit or Rollback both (atomicity guaranteed)**
-
-![5.xa-mysql-xa-lifecycle.png](https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/XAtransactions-blog/images/5.xa-mysql-xa-lifecycle.png)
-
-*Figure 4: MySQL XA Lock Lifecycle - Locks acquired during SQL operations and held until XA COMMIT*
 
 **Understanding when locks are acquired and released**
 
@@ -383,7 +385,7 @@ SELECT id, balance FROM accounts WHERE id = 1;
 
 ![6.xa-pg-prepared-lifecycle.png](https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/XAtransactions-blog/images/6.xa-pg-prepared-lifecycle.png)
 
-*Figure 5: PostgreSQL Prepared Transaction Lock Lifecycle - Locks persist even after connection closes*
+*Figure 6: PostgreSQL Prepared Transaction Lock Lifecycle - Locks persist even after connection closes*
 
 **Understanding when locks are acquired and released**
 
