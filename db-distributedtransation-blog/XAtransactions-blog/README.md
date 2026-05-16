@@ -263,52 +263,8 @@ XA PREPARE 'transfer_001', 'db2', 1;
 ```
 
 **Commit or Rollback both (atomicity guaranteed)**
-```sql
--- If both prepared successfully, commit both
-XA COMMIT 'transfer_001', 'db1', 1;
-XA COMMIT 'transfer_001', 'db2', 1;
 
--- If any fails, rollback both to maintain consistency
--- XA ROLLBACK 'transfer_001', 'db1', 1;
--- XA ROLLBACK 'transfer_001', 'db2', 1;
-```
-
-### Lock Lifecycle in XA Transactions:
-
-```mermaid
-gantt
-    title MySQL XA Transaction Lock Lifecycle
-    dateFormat X
-    axisFormat %L
-
-    section Transaction State
-    XA START           :milestone, m1, 0, 0
-    SQL Operations     :active, a1, 0, 200
-    XA END            :milestone, m2, 200, 0
-    XA PREPARE        :active, a2, 200, 550
-    XA COMMIT         :milestone, m3, 550, 0
-
-    section Lock Status
-    No Locks          :done, l1, 0, 50
-    LOCKS HELD        :crit, l2, 50, 550
-    Locks Released    :done, l3, 550, 600
-```
-
-```mermaid
-graph LR
-    A["1. XA START<br/>(No locks)"] --> B["2. SQL Operations<br/>🔒 Locks Acquired"]
-    B --> C["3. XA END<br/>🔒 Locks HELD"]
-    C --> D["4. XA PREPARE<br/>🔒 Locks STILL HELD"]
-    D --> E["5. XA COMMIT<br/>✅ Locks Released"]
-    E --> F["Complete"]
-
-    style A fill:#90CAF9,stroke:#333,stroke-width:2px
-    style B fill:#FF9800,stroke:#333,stroke-width:2px,color:#fff
-    style C fill:#FFA726,stroke:#333,stroke-width:2px,color:#fff
-    style D fill:#FF7043,stroke:#333,stroke-width:2px,color:#fff
-    style E fill:#4CAF50,stroke:#333,stroke-width:2px,color:#fff
-    style F fill:#8BC34A,stroke:#333,stroke-width:2px
-```
+![How Row Locking Works](https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/XAtransactions-blog/images/5.xa-mysql-xa-lifecycle.png)
 *Figure 4: MySQL XA Lock Lifecycle - Locks acquired during SQL operations and held until XA COMMIT*
 
 **Understanding when locks are acquired and released**
@@ -463,29 +419,7 @@ SELECT id, balance FROM accounts WHERE id = 1;
 
 ### Lock Lifecycle in PostgreSQL Prepared Transactions:
 
-```mermaid
-gantt
-    title PostgreSQL Prepared Transaction Lock Lifecycle
-    dateFormat X
-    axisFormat %L
-
-    section Transaction State
-    BEGIN                    :milestone, m1, 0, 0
-    SQL Operations          :active, a1, 0, 200
-    PREPARE TRANSACTION     :active, a2, 200, 550
-    COMMIT PREPARED         :milestone, m2, 550, 0
-
-    section Lock Status
-    No Locks                :done, l1, 0, 50
-    LOCKS HELD              :crit, l2, 50, 550
-    Locks Released          :done, l3, 550, 600
-
-    section Connection
-    Connected               :active, c1, 0, 200
-    Can Disconnect          :done, c2, 200, 550
-    Connection Free         :done, c3, 550, 600
-```
-
+![How Row Locking Works](https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/XAtransactions-blog/images/6.xa-pg-prepared-lifecycle.png)
 *Figure 5: PostgreSQL Prepared Transaction Lock Lifecycle - Locks persist even after connection closes*
 
 **Understanding when locks are acquired and released**
