@@ -36,7 +36,7 @@ sequenceDiagram
     Note over TM,DB3: Transaction Complete
 ```
 
-![How Row Locking Works](./images/1.xa-2pc-protocal.png)
+![How Row Locking Works]([./images/1.xa-2pc-protocal.png](https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/XAtransactions-blog/images/1.xa-2pc-protocol.png))
 
 *Figure 1: Two-Phase Commit Protocol - Transaction Manager coordinates with multiple database participants*
 
