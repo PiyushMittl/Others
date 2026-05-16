@@ -128,7 +128,9 @@ XA COMMIT 'xid_001';
 
 ### Practical Example:
 
-![How Row Locking Works](https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/XAtransactions-blog/images/3.xa-completedexample.png)
+<div align="center">
+  <img src="https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/XAtransactions-blog/images/3.xa-completedexample.png" alt="XA Complete Example" width="950"/>
+</div>
 
 #### Example Scenario (Initial Balance = 1000):
 **Step-by-Step Flow:**
@@ -212,7 +214,10 @@ SELECT id, balance FROM accounts WHERE id = 1;
 
 **Example: Distributed transaction across two databases**
 
-![How Row Locking Works](https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/XAtransactions-blog/images/4.xa-tm-distributed.png)
+<div align="center">
+  <img src="https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/XAtransactions-blog/images/4.xa-tm-distributed.png" alt="Distributed XA Transaction" width="950"/>
+</div>
+
 *Figure 3: Distributed XA Transaction - Money transfer coordinated across two separate databases*
 
 **Database 1 - Transfer money out**
@@ -241,7 +246,10 @@ XA PREPARE 'transfer_001', 'db2', 1;
 
 **Commit or Rollback both (atomicity guaranteed)**
 
-![How Row Locking Works](https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/XAtransactions-blog/images/5.xa-mysql-xa-lifecycle.png)
+<div align="center">
+  <img src="https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/XAtransactions-blog/images/5.xa-mysql-xa-lifecycle.png" alt="MySQL XA Lock Lifecycle" width="1100"/>
+</div>
+
 *Figure 4: MySQL XA Lock Lifecycle - Locks acquired during SQL operations and held until XA COMMIT*
 
 **Understanding when locks are acquired and released**
