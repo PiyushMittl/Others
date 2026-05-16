@@ -1,7 +1,5 @@
 # Understanding XA Transactions: Lock Lifecycle, Best Practices, and MySQL vs PostgreSQL Comparison
 
-> **💡 Viewing Tip**: If diagrams appear small, use **Ctrl/Cmd + Mouse Wheel** to zoom your browser, or view on GitHub for better diagram rendering. Click diagrams to see details.
-
 ## Overview
 XA Transactions are distributed transactions that follow the X/Open XA standard for two-phase commit (2PC) protocol, allowing multiple separate databases or resources to participate in a single atomic transaction.
 
