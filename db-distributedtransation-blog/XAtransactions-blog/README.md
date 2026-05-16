@@ -20,17 +20,6 @@ The 2PC protocol ensures atomicity across distributed systems:
 
 *Figure 2: Row Locking Example - Two transactions (T1 and T2) competing for the same row with lock wait behavior*
 
-<details>
-<summary>📊 Click here if diagram above is not visible (Text Version)</summary>
-
-**Key Points:**
-- 🔒 = Row Lock Active
-- ⏳ = Transaction Waiting
-- ✅ = Lock Released
-- T2 is blocked from t5 to t7 (during T1's PREPARE and COMMIT phases)
-
-</details>
-
 ### How Row Locking Works - Example with Two Transactions
 
 When multiple transactions try to modify the same row, databases use **row-level locking** to ensure data consistency. Here's how it works:
