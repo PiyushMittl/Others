@@ -1,4 +1,6 @@
-# XA Transactions in MySQL and PostgreSQL
+# Understanding XA Transactions: Lock Lifecycle, Best Practices, and MySQL vs PostgreSQL Comparison
+
+> **💡 Viewing Tip**: If diagrams appear small, use **Ctrl/Cmd + Mouse Wheel** to zoom your browser, or view on GitHub for better diagram rendering. Click diagrams to see details.
 
 ## Overview
 XA Transactions are distributed transactions that follow the X/Open XA standard for two-phase commit (2PC) protocol, allowing multiple separate databases or resources to participate in a single atomic transaction.
@@ -8,13 +10,17 @@ The 2PC protocol ensures atomicity across distributed systems:
 - **Phase 1 (Prepare)**: Transaction manager asks all participants to prepare (validate and lock resources)
 - **Phase 2 (Commit/Rollback)**: If all participants are ready, commit; otherwise, rollback all
 
-![How Row Locking Works](https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/XAtransactions-blog/images/1.xa-2pc-protocol.png)
+<div align="center">
+  <img src="https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/XAtransactions-blog/images/1.xa-2pc-protocol.png" alt="Two-Phase Commit Protocol" width="900"/>
+</div>
 
 *Figure 1: Two-Phase Commit Protocol - Transaction Manager coordinates with multiple database participants*
 
 ## Understanding Row Locking in XA Transactions
 
-![How Row Locking Works](https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/XAtransactions-blog/images/2.xa-understanding-xa.png)
+<div align="center">
+  <img src="https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/XAtransactions-blog/images/2.xa-understanding-xa.png" alt="Row Locking Example" width="1000"/>
+</div>
 
 *Figure 2: Row Locking Example - Two transactions (T1 and T2) competing for the same row with lock wait behavior*
 
@@ -483,3 +489,37 @@ Both databases typically work with transaction managers like:
 - MySQL Documentation: XA Transactions
 - PostgreSQL Documentation: Two-Phase Transactions
 - Patterns for distributed transactions: Saga, Event Sourcing, CQRS
+
+---
+
+## 📊 About the Diagrams
+
+This blog uses **Mermaid diagrams** for interactive visualizations.
+
+### If Diagrams Appear Small:
+
+**On Gist:**
+- Use **Ctrl/Cmd + Mouse Wheel** to zoom your browser (recommended)
+- Use browser zoom: **Ctrl/Cmd + "+"** to increase size
+- Some Gist themes render diagrams smaller than others
+
+**Better Viewing Options:**
+- ✅ **GitHub Repository**: View on GitHub for optimal diagram size
+- ✅ **Mermaid Live Editor**: Copy diagram code to [mermaid.live](https://mermaid.live/) for full-screen editing
+- ✅ **VS Code**: Install "Markdown Preview Mermaid Support" extension for local viewing
+- ✅ **Export as Images**: Use Mermaid Live Editor to export diagrams as PNG/SVG at custom sizes
+
+### Diagrams Included:
+1. **Two-Phase Commit Protocol** - Sequence diagram showing coordinator and participants
+2. **Row Locking Behavior** - Interactive sequence showing T1 and T2 lock contention
+3. **Distributed Transaction Architecture** - Money transfer across two databases
+4. **MySQL XA Lock Lifecycle** - Timeline and flow of lock states (with timing in seconds)
+5. **PostgreSQL Lock Lifecycle** - Prepared transaction lock behavior (with timing in seconds)
+6. **MySQL vs PostgreSQL Comparison** - Feature comparison visualization
+
+### Mermaid Syntax:
+All diagrams are written in plain text Mermaid syntax, making them:
+- Easy to copy and modify
+- Version control friendly
+- Editable without image tools
+- Render-able in most modern markdown viewers
