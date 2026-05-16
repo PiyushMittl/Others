@@ -303,6 +303,7 @@ graph TB
     style DB1_NEW fill:#8BC34A,stroke:#333,stroke-width:2px
     style DB2_NEW fill:#8BC34A,stroke:#333,stroke-width:2px
 ```
+![How Row Locking Works](https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/XAtransactions-blog/images/4.xa-tm-distributed.png)
 *Figure 3: Distributed XA Transaction - Money transfer coordinated across two separate databases*
 
 **Database 1 - Transfer money out**
