@@ -26,7 +26,7 @@ This is where the **Two-Phase Commit Protocol** and **XA Transactions** come int
 
 The Two-Phase Commit Protocol is a distributed algorithm that ensures all participants in a distributed transaction either **commit** or **abort** together, maintaining atomicity across multiple resources.
 
-![1.2pc-the-challange.png](https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/2PC-blog/images/1.2pc-the-challange.png)
+![1.2pc-the-challange-wide.png](https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/2PC-blog/images/1.2pc-the-challange-wide.png)
 
 ### The Protocol Flow
 
@@ -45,7 +45,7 @@ The protocol involves a **coordinator** (Transaction Manager) and multiple **par
     └─────────────┘ └─────────────┘ └─────────────┘
 ```
 
-![2.2pc-what-is-2pc.png](https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/2PC-blog/images/2.2pc-what-is-2pc.png)
+![2.2pc-what-is-2pc-wide.png](https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/2PC-blog/images/2.2pc-what-is-2pc-wide.png)
 
 ### Phase 1: Prepare Phase (Voting Phase)
 
@@ -68,7 +68,7 @@ Coordinator: "Can you all commit this transaction?"
      └──→ Oracle: "YES, I'm ready" ✓
 ```
 
-![3.2pc-phase1.png](https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/2PC-blog/images/3.2pc-phase1.png)
+![3.2pc-phase1-wide.png](https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/2PC-blog/images/3.2pc-phase1-wide.png)
 
 ### Phase 2: Commit Phase (Decision Phase)
 
@@ -92,7 +92,7 @@ Coordinator: "At least one disagreed, ROLLBACK!"
      └──→ Oracle: Rolls back and releases locks
 ```
 
-![4.2pc-phase2.png](https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/2PC-blog/images/4.2pc-phase2.png)
+![4.2pc-phase2-wide.png](https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/2PC-blog/images/4.2pc-phase2-wide.png)
 
 ### Critical Properties
 
