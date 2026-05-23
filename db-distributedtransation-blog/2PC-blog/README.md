@@ -26,15 +26,17 @@ This is where the **Two-Phase Commit Protocol** and **XA Transactions** come int
 
 The Two-Phase Commit Protocol is a distributed algorithm that ensures all participants in a distributed transaction either **commit** or **abort** together, maintaining atomicity across multiple resources.
 
+![1.2pc-the-challange.png](https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/2PC-blog/images/1.2pc-the-challange.png)
+
 ### The Protocol Flow
 
 The protocol involves a **coordinator** (Transaction Manager) and multiple **participants** (Resource Managers like databases):
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                   Transaction Manager                        │
-│                      (Coordinator)                           │
-└─────────────┬─────────────┬─────────────┬──────────────────┘
+│                   Transaction Manager                       │
+│                      (Coordinator)                          │
+└─────────────┬─────────────┬─────────────┬───────────────────┘
               │             │             │
               ▼             ▼             ▼
     ┌─────────────┐ ┌─────────────┐ ┌─────────────┐
@@ -42,6 +44,8 @@ The protocol involves a **coordinator** (Transaction Manager) and multiple **par
     │ Participant │ │ Participant │ │ Participant │
     └─────────────┘ └─────────────┘ └─────────────┘
 ```
+
+![2.2pc-what-is-2pc.png](https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/2PC-blog/images/2.2pc-what-is-2pc.png)
 
 ### Phase 1: Prepare Phase (Voting Phase)
 
@@ -64,6 +68,8 @@ Coordinator: "Can you all commit this transaction?"
      └──→ Oracle: "YES, I'm ready" ✓
 ```
 
+![3.2pc-phase1.png](https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/2PC-blog/images/3.2pc-phase1.png)
+
 ### Phase 2: Commit Phase (Decision Phase)
 
 Based on the responses from Phase 1, the coordinator makes the final decision:
@@ -85,6 +91,8 @@ Coordinator: "At least one disagreed, ROLLBACK!"
      ├──→ PostgreSQL: Rolls back and releases locks
      └──→ Oracle: Rolls back and releases locks
 ```
+
+![4.2pc-phase2.png](https://github.com/PiyushMittl/Others/blob/main/db-distributedtransation-blog/2PC-blog/images/4.2pc-phase2.png)
 
 ### Critical Properties
 
