@@ -1220,7 +1220,7 @@ public async Task TransferMoney(
 ### ❌ Avoid 2PC When:
 
 1. **High Throughput Required**
-   - > 1000 transactions per second
+   - 1000 transactions per second
    - Latency sensitive (< 10ms response time)
    - High-frequency trading systems
 
