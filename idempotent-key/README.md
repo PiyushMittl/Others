@@ -34,13 +34,13 @@ The server:
 
 | Idempotency Key | Transaction Id | Status  |
 | --------------- | -------------- | ------- |
-| o2nsP2          | T123           | Success |
+| o2nsP2          | 123           | Success |
 
 The server then returns:
 
 ```json
 {
-  "transactionId": "T123",
+  "transactionId": "123",
   "status": "Success"
 }
 ```
@@ -68,7 +68,7 @@ Instead of transferring another ₹100, it simply returns the previously stored 
 
 ```json
 {
-  "transactionId": "T123",
+  "transactionId": "123",
   "status": "Success"
 }
 ```
