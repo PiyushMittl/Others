@@ -6,6 +6,8 @@ What should happen?
 
 Ideally, the payment should be processed only once. Without proper safeguards, however, the system may create two payment transactions, resulting in duplicate charges.
 
+![1.duplicate-transaction.png](https://github.com/PiyushMittl/Others/blob/main/idempotent-key/images/1.duplicate-transaction.png)
+
 This is where **idempotency keys** come in.
 
 An idempotency key is a unique identifier associated with a request. When the server receives a request, it stores the key along with the result of the operation. If the same request arrives again with the same key, the server doesn't process it a second time. Instead, it returns the original response.
@@ -45,7 +47,7 @@ The server then returns:
 }
 ```
 
-![1.failed-request.png](https://github.com/PiyushMittl/Others/blob/main/idempotent-key/images/1.failed-request.png)
+![2.failed-request.png](https://github.com/PiyushMittl/Others/blob/main/idempotent-key/images/2.failed-request.png)
 
 ### Retry Request
 
@@ -72,7 +74,7 @@ Instead of transferring another ₹100, it simply returns the previously stored 
   "status": "Success"
 }
 ```
-![2.retried-request.png](https://github.com/PiyushMittl/Others/blob/main/idempotent-key/images/2.retried-request.png)
+![3.retried-request.png](https://github.com/PiyushMittl/Others/blob/main/idempotent-key/images/3.retried-request.png)
 
 As a result:
 
@@ -87,7 +89,7 @@ This simple mechanism solves many real-world problems:
 * Repeated resource provisioning
 * Retry storms caused by transient failures
 
-![3.complete-idempotency.png](https://github.com/PiyushMittl/Others/blob/main/idempotent-key/images/3.complete-idempotency.png)
+![4.complete-idempotency.png](https://github.com/PiyushMittl/Others/blob/main/idempotent-key/images/4.complete-idempotency.png)
 
 Idempotency becomes especially important in distributed systems because failures are normal. Networks are unreliable, requests can time out, and clients often retry operations automatically.
 
