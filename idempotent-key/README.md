@@ -6,7 +6,7 @@ What should happen?
 
 Ideally, the payment should be processed only once. Without proper safeguards, however, the system may create two payment transactions, resulting in duplicate charges.
 
-![1.duplicate-transaction.png](https://github.com/PiyushMittl/Others/blob/main/idempotent-key/images/1.duplicate-transaction.png)
+![1.duplicate-transation.png](https://github.com/PiyushMittl/Others/blob/main/idempotent-key/images/1.duplicate-transation.png)
 
 This is where **idempotency keys** come in.
 
