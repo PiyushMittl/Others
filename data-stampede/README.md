@@ -250,7 +250,7 @@ where a few minutes of stale data is usually acceptable.
 
 A common question is:
 
-> What if thousands of cache entries expire at exactly the same time?
+**What if thousands of cache entries expire at exactly the same time?**
 
 Consider an application that caches product information.
 
