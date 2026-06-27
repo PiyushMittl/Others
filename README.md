@@ -23,7 +23,7 @@ A collection of hands-on technical blogs and tutorials covering **Azure**, **dis
 | [Cache Stampede](data-stampede/README.md) | How a cache can bring down your database, and how to prevent it | [📝 Read](https://piyushanandmittal.blogspot.com/2026/06/how-cache-can-bring-down-your-database.html) | [▶️ Watch](https://youtu.be/zf6n3Vf6N-U) |
 | [Distributed Transactions](db-distributedtransation-blog/) | Patterns for distributed transactions — [2PC](db-distributedtransation-blog/2PC-blog/README.md), [SAGA](db-distributedtransation-blog/SAGA-blog/README.md), [XA](db-distributedtransation-blog/XAtransactions-blog/README.md) | [📝 2PC](https://piyushanandmittal.blogspot.com/2026/05/distributed-transactions-how-2pc-solves.html), [XA](https://piyushanandmittal.blogspot.com/2026/05/distributed-transactions-mysql-xa.html) | — |
 | [Idempotency Key](idempotent-key/README.md) | Why every distributed system needs an idempotency key | [📝 Read](https://piyushanandmittal.blogspot.com/2026/06/a-simple-design-pattern-that-can-save.html) | [▶️ Watch](https://youtu.be/yj2zwD5SBH8) |
-| [Optimistic Locking](optimistic-locking/README.md) | Handling concurrent updates to the same record | — | — |
+| [Optimistic Locking](optimistic-locking/README.md) | Handling concurrent updates to the same record | [📝 Read](https://piyushanandmittal.blogspot.com/2026/06/what-happens-if-two-users-update-same.html) | — |
 | [Reliability vs Availability](basics-reliability-vs-availability/README.md) | Key concepts for building robust systems | [📝 Read](https://piyushanandmittal.blogspot.com/2024/12/reliability-vs-availability.html) | — |
 
 ---
