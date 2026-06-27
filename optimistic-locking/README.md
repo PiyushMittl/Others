@@ -26,7 +26,7 @@ This is known as a **Concurrent Update Problem**.
 
 ## The Problem
 
-![Data Override Problem](images/1.data-overridden-problem.png)
+![Data Override Problem](https://github.com/PiyushMittl/Others/blob/main/optimistic-locking/images/1.data-overridden-problem.png?raw=true)
 
 Suppose the current record looks like this:
 
@@ -114,7 +114,7 @@ This is called a **Lost Update Problem** or **Data Override Problem**.
 
 ## Solution 1: Pessimistic Locking
 
-![Pessimistic Locking](images/2.pessimistic-lockingpng.png)
+![Pessimistic Locking](https://github.com/PiyushMittl/Others/blob/main/optimistic-locking/images/2.pessimistic-lockingpng.png?raw=true)
 
 One solution is to lock the record while a user is editing it.
 
@@ -159,7 +159,7 @@ Not practical for web applications.
 
 ## Solution 2: Optimistic Locking
 
-![Optimistic Locking](images/3.optimistic-locking.png)
+![Optimistic Locking](https://github.com/PiyushMittl/Others/blob/main/optimistic-locking/images/3.optimistic-locking.png?raw=true)
 
 Most modern applications use **Optimistic Locking**.
 
@@ -281,14 +281,17 @@ DB = 150, V1.1 ✓             Version mismatch!
 
 The application tells User2:
 
-> ⚠️ **Conflict Detected**
-> 
-> This record has been modified by someone else since you last viewed it.
-> 
-> Current Version: V1.1
-> Your Version: V1.0
-> 
-> Please refresh and try again.
+```text
+⚠️ Conflict Detected
+
+This record has been modified by someone else
+since you last viewed it.
+
+Current Version: V1.1
+Your Version:    V1.0
+
+Please refresh and try again.
+```
 
 **No data is lost** - User2 must refresh to see User1's change (value = 150, version = V1.1), then decide whether to reapply their changes.
 
@@ -365,6 +368,8 @@ This simple technique prevents lost updates while allowing systems to remain sca
 
 The next time you update your profile and see:
 
-> "This record has been modified by another user."
+```text
+"This record has been modified by another user."
+```
 
 you're seeing Optimistic Locking in action.
