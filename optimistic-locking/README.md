@@ -94,6 +94,20 @@ Database now contains:
 }
 ```
 
+Here is the full flow side by side:
+
+```text
+User1                      User2
+  ↓                          ↓
+GET → 100                GET → 100
+  ↓                          ↓
+Modify → 200             Modify → 150
+  ↓                          ↓
+Save → DB = 200          Save → DB = 150
+                              ↓
+                  User1's update (200) lost ❌
+```
+
 **User1's update is silently overridden by User2.**
 
 This is called a **Lost Update Problem** or **Data Override Problem**.
@@ -247,6 +261,24 @@ Update **rejected**.
 ❌ 6. Conflict
 ```
 
+Here is the full flow side by side:
+
+```text
+User1                          User2
+  ↓                              ↓
+GET → V1.0                   GET → V1.0
+  ↓                              ↓
+Modify → 150                 Modify → 200
+  ↓                              ↓
+Save (V1.0)                  Save (V1.0)
+  ↓                              ↓
+DB = 150, V1.1 ✓             Version mismatch!
+                          (DB is V1.1, not V1.0)
+                                 ↓
+                             Conflict ❌
+                            Refresh & retry
+```
+
 The application tells User2:
 
 > ⚠️ **Conflict Detected**
@@ -290,20 +322,6 @@ Return 409 Conflict to User2
 
 The application knows another user already modified the record and can notify User2 appropriately.
 
-## Where Is This Used?
-
-Optimistic Locking is extremely common.
-
-Examples include:
-
-* E-commerce inventory systems
-* User profile updates
-* Banking applications
-* Ticket booking systems
-* Cloud platforms
-* Configuration management systems
-
-Whenever multiple users can update the same data, conflict detection becomes important.
 
 ## Why Not Always Lock?
 
