@@ -8,10 +8,10 @@ A collection of hands-on technical blogs and tutorials covering **Azure**, **dis
 
 | Topic | Description | 📝 Blog | 🎥 Video |
 |-------|-------------|---------|----------|
-| [Azure AgriSense](azure-agrisense-blog/README.md) | IoT soil moisture monitoring and alert system on Azure | — | — |
-| [Azure Data Share](azure-datashare-blog/README.md) | Getting started with Azure Data Share — a comprehensive guide | — | — |
-| [Azure DNS](azure-dns-blog/AZURE-DNS-README.md) | Azure DNS concepts and DNS hierarchy explained | — | — |
-| [Service Bus: Queues vs Topics](azure-queue-vs-topic-blog/README.md) | Understanding Azure Service Bus messaging patterns | — | — |
+| [Azure AgriSense](azure-agrisense-blog/README.md) | IoT soil moisture monitoring and alert system on Azure | [📝 Read](https://piyushanandmittal.blogspot.com/2024/12/iot-soil-moisture-monitoring-and-alert.html) | — |
+| [Azure Data Share](azure-datashare-blog/README.md) | Getting started with Azure Data Share — a comprehensive guide | [📝 Read](https://piyushanandmittal.blogspot.com/2024/12/simplifying-cross-org-data-sharing-with.html) | — |
+| [Azure DNS](azure-dns-blog/AZURE-DNS-README.md) | Azure DNS concepts and DNS hierarchy explained | [📝 Read](https://piyushanandmittal.blogspot.com/2026/05/understanding-dns-resolution-and.html) | — |
+| [Service Bus: Queues vs Topics](azure-queue-vs-topic-blog/README.md) | Understanding Azure Service Bus messaging patterns | [📝 Read](https://piyushanandmittal.blogspot.com/2024/12/queue-vs-topic-using-azure-service-bus.html) | [▶️ Watch](https://youtu.be/kzJIg6MAEXc) |
 | [Azure AI Prompt Flow](azureai-promt-flow/README.md) | Building an intelligent chatbot using Azure AI and Prompt Flow | — | — |
 
 ---
@@ -21,10 +21,10 @@ A collection of hands-on technical blogs and tutorials covering **Azure**, **dis
 | Topic | Description | 📝 Blog | 🎥 Video |
 |-------|-------------|---------|----------|
 | [Cache Stampede](data-stampede/README.md) | How a cache can bring down your database, and how to prevent it | [📝 Read](https://piyushanandmittal.blogspot.com/2026/06/how-cache-can-bring-down-your-database.html) | [▶️ Watch](https://youtu.be/zf6n3Vf6N-U) |
-| [Distributed Transactions](db-distributedtransation-blog/) | Patterns for distributed transactions — [2PC](db-distributedtransation-blog/2PC-blog/README.md), [SAGA](db-distributedtransation-blog/SAGA-blog/README.md), [XA](db-distributedtransation-blog/XAtransactions-blog/README.md) | — | — |
+| [Distributed Transactions](db-distributedtransation-blog/) | Patterns for distributed transactions — [2PC](db-distributedtransation-blog/2PC-blog/README.md), [SAGA](db-distributedtransation-blog/SAGA-blog/README.md), [XA](db-distributedtransation-blog/XAtransactions-blog/README.md) | [📝 2PC](https://piyushanandmittal.blogspot.com/2026/05/distributed-transactions-how-2pc-solves.html), [XA](https://piyushanandmittal.blogspot.com/2026/05/distributed-transactions-mysql-xa.html) | — |
 | [Idempotency Key](idempotent-key/README.md) | Why every distributed system needs an idempotency key | [📝 Read](https://piyushanandmittal.blogspot.com/2026/06/a-simple-design-pattern-that-can-save.html) | [▶️ Watch](https://youtu.be/yj2zwD5SBH8) |
 | [Optimistic Locking](optimistic-locking/README.md) | Handling concurrent updates to the same record | — | — |
-| [Reliability vs Availability](basics-reliability-vs-availability/README.md) | Key concepts for building robust systems | — | — |
+| [Reliability vs Availability](basics-reliability-vs-availability/README.md) | Key concepts for building robust systems | [📝 Read](https://piyushanandmittal.blogspot.com/2024/12/reliability-vs-availability.html) | — |
 
 ---
 
@@ -32,10 +32,10 @@ A collection of hands-on technical blogs and tutorials covering **Azure**, **dis
 
 | Topic | Description | 📝 Blog | 🎥 Video |
 |-------|-------------|---------|----------|
-| [Create SPN in Azure](spn-create/README.md) | Creating a Service Principal Name for authentication | — | — |
-| [Create Service Connection in ADO](create-sc-ado-spn/README.md) | Connecting Azure DevOps to external resources using SPN | — | — |
-| [Azure AD Token with Postman](postman-create-az-token/README.md) | Generating an Azure AD access token using Postman | — | — |
-| [Postman + Azure DevOps](postman-integration-ado/README.md) | Integrating Postman API tests into your ADO pipeline | — | — |
+| [Create SPN in Azure](spn-create/README.md) | Creating a Service Principal Name for authentication | [📝 Read](https://piyushanandmittal.blogspot.com/2023/03/create-azure-active-directory.html) | — |
+| [Create Service Connection in ADO](create-sc-ado-spn/README.md) | Connecting Azure DevOps to external resources using SPN | [📝 Read](https://piyushanandmittal.blogspot.com/2023/03/step-by-step-guide-creating-service.html) | — |
+| [Azure AD Token with Postman](postman-create-az-token/README.md) | Generating an Azure AD access token using Postman | [📝 Read](https://piyushanandmittal.blogspot.com/2023/03/create-azure-oatuth-token-using-postman.html) | — |
+| [Postman + Azure DevOps](postman-integration-ado/README.md) | Integrating Postman API tests into your ADO pipeline | [📝 Read](https://piyushanandmittal.blogspot.com/2023/03/boosting-your-testing-automation-with.html) | — |
 | [SSH with VS Code on Linux](linux-ssh-vscode/README.md) | Setting up SSH key-based access for remote development | — | — |
 
 ---
