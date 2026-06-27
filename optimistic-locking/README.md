@@ -97,15 +97,15 @@ Database now contains:
 Here is the full flow side by side:
 
 ```text
-User1                      User2
-  ↓                          ↓
-GET → 100                GET → 100
-  ↓                          ↓
-Modify → 200             Modify → 150
-  ↓                          ↓
-Save → DB = 200          Save → DB = 150
-                              ↓
-                  User1's update (200) lost ❌
+User1                 User2
+  ↓                     ↓
+GET → 100             GET → 100
+  ↓                     ↓
+Modify → 200          Modify → 150
+  ↓                     ↓
+Save → DB = 200       Save → DB = 150
+                        ↓
+      User1's update (200) lost ❌
 ```
 
 **User1's update is silently overridden by User2.**
@@ -264,20 +264,18 @@ Update **rejected**.
 Here is the full flow side by side:
 
 ```text
-User1                          User2
-  ↓                              ↓
-GET → V1.0                   GET → V1.0
-  ↓                              ↓
-Modify → 150                 Modify → 200
-  ↓                              ↓
-Save (V1.0)                  Save (V1.0)
-  ↓                              ↓
-DB = 150, V1.1 ✓             Version mismatch!
-                          (DB is V1.1, not V1.0)
-                                 ↓
-                             Conflict ❌
-                            Refresh & retry
-```
+User1                 User2
+  ↓                     ↓
+GET → V1.0            GET → V1.0
+  ↓                     ↓
+Modify → 150          Modify → 200
+  ↓                     ↓
+Save (V1.0)           Save (V1.0)
+  ↓                     ↓
+Success               Conflict ❌
+DB: 150, V1.1         (stale V1.0)
+                        ↓
+                      Refresh & retry
 
 The application tells User2:
 
