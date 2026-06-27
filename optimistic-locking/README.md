@@ -282,6 +282,7 @@ DB = 150, V1.1 ✓             Version mismatch!
 The application tells User2:
 
 ```text
+
 ⚠️ Conflict Detected
 
 This record has been modified by someone else
